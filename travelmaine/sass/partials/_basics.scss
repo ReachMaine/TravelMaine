@@ -14,3 +14,61 @@
         height: 100%;
 	}
 }
+.rmm-border-green {
+	border: 1px solid $travelme-green;
+}
+// styling to make the tabs of a tab module on the side instead of at the top - at
+@media(min-width:768px) {
+	.rmm-vertical-tabs {
+		ul.et_pb_tabs_controls {
+			float: left;
+			 width: 30%;
+			 display: block;
+			 background: transparent;
+			 li {
+					display: block;
+					width: 100%;
+					border: 1px solid #d9d9d9;
+					//margin-bottom: 5px;
+					a {
+						display: block;
+						width: 100%;
+					  padding: 15px 30px ;
+					  font-size: 15px;
+					}
+			}
+			li:not(.et_pb_tab_active):last-child {
+				border-right: 1px solid #d9d9d9;
+			}
+			li:not(:last-child) {
+				margin-bottom: 5px;
+			}
+		}
+		.custom-tabs ul.et_pb_tabs_controls:after {
+			content: none;
+		}
+		.et_pb_all_tabs {
+		  display: flex;
+		  width: 65%;
+		}
+		.et_pb_tab_active a {
+		  //color: $travelme-green!important;
+		}
+	}
+
+}
+@media(max-width:767px) {
+	/*.rmm-vertical-tabs ul.et_pb_tabs_controls.clearfix {
+	  float: left;
+	  width: 100%;
+	  display: inherit;
+	}
+	.rmm-vertical-tabs .et_pb_all_tabs {
+	  display: flex;
+	  width: 100%;
+	}
+	.rmm-vertical-tabs .et_pb_tab.et_pb_tab.clearfix.et-pb-active-slide {
+	  border-left: 0px solid #d9d9d9;
+	} */
+}
+// end vertical tabs
