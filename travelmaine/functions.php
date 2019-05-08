@@ -9,3 +9,13 @@ add_action( 'wp_enqueue_scripts', 'divi__child_theme_enqueue_styles' );
 //require_once(get_stylesheet_directory().'/custom/reach-CTAs.php');
 require_once(get_stylesheet_directory().'/custom/language.php');
 require_once(get_stylesheet_directory().'/custom/divi.php');
+
+function my_scripts_method() {
+    wp_enqueue_script(
+        'rmm_custom_js',
+        get_stylesheet_directory_uri() . '/custom/divi.js',
+        array( 'jquery' )
+    );
+}
+
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
