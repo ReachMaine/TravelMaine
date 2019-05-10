@@ -17,31 +17,48 @@
 .rmm-border-green {
 	border: 1px solid $travelme-green;
 }
-// styling to make the tabs of a tab module on the side instead of at the top - at
+// styling to make the tabs of a tab module on the side instead of at the top - at desktop
+.rmm-vertical-tabs { // this is for both desktop & mobile
+	.et_pb_all_tabs {
+		.et_pb_tab {
+			 padding: 0px;
+		}
+	}
+}
 @media(min-width:768px) {
 	.rmm-vertical-tabs {
+		background-color: $travelme-dkgrey;
 		ul.et_pb_tabs_controls {
-			float: left;
+			 background-color: $travelme-dkgrey;
+			 float: left;
 			 width: 30%;
 			 display: block;
-			 background: transparent;
+
 			 li {
+				  margin-left: -20px;
+					background-color: white;
 					display: block;
 					width: 100%;
-					border: 1px solid #d9d9d9;
+					border-width: 1px 1px 0px 1px;
+					border-color: #d9d9d9;
+					border-style: solid;
+					height: auto!important;
+					margin-bottom: 0px;
 					//margin-bottom: 5px;
 					a {
 						display: block;
 						width: 100%;
-					  padding: 15px 30px ;
+					  padding: 10px 10px 10px 20px ;
 					  font-size: 15px;
+						text-transform: uppercase;
 					}
 			}
 			li:not(.et_pb_tab_active):last-child {
 				border-right: 1px solid #d9d9d9;
 			}
-			li:not(:last-child) {
-				margin-bottom: 5px;
+			li:last-child {
+				//margin-bottom: 5px;
+				border-bottom: 1px solid #d9d9d9;
 			}
 		}
 		.custom-tabs ul.et_pb_tabs_controls:after {
@@ -49,7 +66,11 @@
 		}
 		.et_pb_all_tabs {
 		  display: flex;
-		  width: 65%;
+		  width: 70%;
+			background-color: $travelme-dkgrey;
+			.et_pb_tab {
+				 padding: 0px;
+			}
 		}
 		.et_pb_tab_active a {
 		  //color: $travelme-green!important;
@@ -72,3 +93,9 @@
 	} */
 }
 // end vertical tabs
+
+// text blocks under the tabs
+.rmm-home-textblock {
+	padding: 20px;
+	background-color: $travelme-ltgreen;
+}
