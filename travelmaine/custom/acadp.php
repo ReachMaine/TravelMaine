@@ -15,3 +15,13 @@ function gotravel_before_content ( $in_id) {
 
 
 } // end of function gotravel_before_content
+
+
+/**
+ * Enables the  custom fields box in listing edit screen.
+ */
+function gotravel_listing_supports() {
+  add_post_type_support('acadp_listings', 'custom-fields');
+}
+//add_action( 'plugins_loaded', 'gotravel_listing_supports' );
+add_action('init', 'gotravel_listing_supports', 100);
