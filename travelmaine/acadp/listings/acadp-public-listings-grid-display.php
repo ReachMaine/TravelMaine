@@ -85,10 +85,10 @@
 
 													<?php
 														//echo "<pre>"; var_dump($post_meta); echo "</pre>";
-														if (array_key_exists("216",$post_meta) ) {
-
+														$custom_field = "216";// custom field subtitle, id=216
+														if (array_key_exists($custom_field,$post_meta) ) {
 															echo '<div class="acadp-listing-subtitle">' ;
-															echo $post_meta["216"][0];
+															echo $post_meta[$custom_field][0];
 															echo "</div>";
 														}
 
@@ -97,32 +97,32 @@
 											</div>
 											<div class="acadp-listing-image">
                         <?php if( $can_show_images ) : ?>
-                            <a href="<?php the_permalink(); ?>" class="acadp-responsive-container"><?php the_acadp_listing_thumbnail( $post_meta ); ?></a>
+                            <a href="<?php the_permalink(); ?>" class="acadp-responsive-containerX"><?php the_acadp_listing_thumbnail( $post_meta ); ?></a>
                         <?php endif; ?>
 											</div>
-											<?php /* address, phone website */
+											<?php /* contact info - address, phone website */
 												$contact_info = "";
 
 												if (array_key_exists("address",$post_meta) ) {
 													if ($post_meta["address"][0]) {
-														$contact_info .= $post_meta["address"][0].'</br>';
+														$contact_info .= '<div class="acadp-listing-addr">'.$post_meta["address"][0].'</div>';
 													}
 												}
 												if (array_key_exists("phone",$post_meta) ) {
 													if ($post_meta["phone"][0]){
-														$contact_info .= $post_meta["phone"][0].'</br>';
+														$contact_info .= '<div class="acadp-listing-phone">'.$post_meta["phone"][0].'</div>';
 													}
 												}
 												if (array_key_exists("website",$post_meta) ) {
 													if ($post_meta["website"][0]) {
-														$contact_info .= $post_meta["website"][0].'</br>';
+														$contact_info .= '<div class="acadp-listing-url">'.$post_meta["website"][0].'</div>';
 													}
 												}
 												echo '<div class="acadp-listing-contactinfo">';
 												echo $contact_info;
 												echo '</div>';
 											?>
-                        <div class="caption">
+                        <div class="caption acadp-listing-catline">
                             <?php
 																/* bottom line with category & location */
                                 $info = array();

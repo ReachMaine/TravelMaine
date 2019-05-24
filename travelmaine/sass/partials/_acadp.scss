@@ -1,0 +1,28 @@
+/* custom styling for acadp */
+
+.acadp {
+  .thumbnail.acadp-entry { // listing in grid view
+    padding: 6px;
+
+    .acadp-listings-title-block {  // Title block = title & subtitle
+      padding-bottom: 6px;
+    }
+
+    .acadp-listing-image {
+      width: 35%;
+      float: left;
+      padding-right: 4px;
+      a {
+        background-color: transparent;
+      }
+    }
+    .acadp-listing-contactinfo {
+      width: 65%;
+      float: left;
+      font-size: .9em;
+    }
+    .acadp-listing-catline {
+
+    }
+  }
+}

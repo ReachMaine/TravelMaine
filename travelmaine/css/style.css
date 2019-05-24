@@ -83,4 +83,20 @@
   padding: 20px;
   background-color: #daf1e9; }
 
+/* custom styling for acadp */
+.acadp .thumbnail.acadp-entry {
+  padding: 6px; }
+  .acadp .thumbnail.acadp-entry .acadp-listings-title-block {
+    padding-bottom: 6px; }
+  .acadp .thumbnail.acadp-entry .acadp-listing-image {
+    width: 35%;
+    float: left;
+    padding-right: 4px; }
+    .acadp .thumbnail.acadp-entry .acadp-listing-image a {
+      background-color: transparent; }
+  .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo {
+    width: 65%;
+    float: left;
+    font-size: .9em; }
+
 /* **** media **** */
