@@ -85,20 +85,22 @@
 
 													<?php
 														//echo "<pre>"; var_dump($post_meta); echo "</pre>";
-														$custom_field = "216";// custom field subtitle, id=216
+														 $custom_field = "216";// custom field subtitle, id=216
 														if (array_key_exists($custom_field,$post_meta) ) {
 															echo '<div class="acadp-listing-subtitle">' ;
 															echo $post_meta[$custom_field][0];
 															echo "</div>";
 														}
-
 													?>
 													<?php the_acadp_listing_labels( $post_meta ); ?>
 											</div>
 											<div class="acadp-listing-image">
-                        <?php if( $can_show_images ) : ?>
+                        <?php
+													$hasthumb = "";
+													if ( $can_show_images  &&  (isset( $post_meta['images'])) ) {
+														$hasthumb = "hasthumb"; ?>
                             <a href="<?php the_permalink(); ?>" class="acadp-responsive-containerX"><?php the_acadp_listing_thumbnail( $post_meta ); ?></a>
-                        <?php endif; ?>
+                        <?php } ?>
 											</div>
 											<?php /* contact info - address, phone website */
 												$contact_info = "";
@@ -118,7 +120,7 @@
 														$contact_info .= '<div class="acadp-listing-url">'.$post_meta["website"][0].'</div>';
 													}
 												}
-												echo '<div class="acadp-listing-contactinfo">';
+												echo '<div class="acadp-listing-contactinfo '.$hasthumb.'">';
 												echo $contact_info;
 												echo '</div>';
 											?>
