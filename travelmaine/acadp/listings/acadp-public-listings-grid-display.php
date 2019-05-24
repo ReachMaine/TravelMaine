@@ -81,7 +81,7 @@
                 <div class="<?php echo $span; ?>">
                     <div <?php the_acadp_listing_entry_class( $post_meta, 'thumbnail' ); ?>>
 											<div class="acadp-listings-title-block">
-													<h3 class="acadp-no-margin"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+													<h4 class="acadp-no-margin"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
 													<?php
 														//echo "<pre>"; var_dump($post_meta); echo "</pre>";
@@ -113,19 +113,15 @@
 												if (array_key_exists("phone",$post_meta) ) {
 												 if ($post_meta["phone"][0]){
 													  $contact_info .= '<span class="glyphicon glyphicon-earphone"></span>';
-														$contact_info .= '<div class="acadp-listing-phone">'.$post_meta["phone"][0].'</div>';
+														$contact_info .= '<div class="acadp-listing-phone">'.format_phone($post_meta["phone"][0]).'</div>';
 													}
-													/*	if( ! empty( $post_meta['phone'][0] ) ) {
-														echo '<span class="acadp-phone">';
-														echo '<span class="glyphicon glyphicon glyphicon-earphone"></span>&nbsp;';
-														echo '<span><a class="acadp-show-phone-number" href="javascript: void(0);">'.__( ' Show Phone Number', 'advanced-classifieds-and-directory-pro' ).'</a></span>';
-														echo '<span class="acadp-phone-number" style="display: none;">'.$post_meta['phone'][0].'</span>';
-														echo '</span>';
-													}*/
 												}
 												if (array_key_exists("website",$post_meta) ) {
 													if ($post_meta["website"][0]) {
-														$contact_info .= '<div class="acadp-listing-url">'.$post_meta["website"][0].'</div>';
+														//$contact_info .= '<div class="acadp-listing-url">'.$post_meta["website"][0].'</div>';
+														$contact_info .= '<div class="acadp-listing-url">';
+														$contact_info .= '<a target="_blank" href="'.$post_meta["website"][0].'">website <span class="glyphicon glyphicon-circle-arrow-right"></span></a>';
+														$contact_info .= '</div>';
 													}
 												}
 												echo '<div class="acadp-listing-contactinfo small '.$hasthumb.'">';

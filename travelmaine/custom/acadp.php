@@ -25,3 +25,15 @@ function gotravel_listing_supports() {
 }
 //add_action( 'plugins_loaded', 'gotravel_listing_supports' );
 add_action('init', 'gotravel_listing_supports', 100);
+
+function format_phone($in_phone_text) {
+  $out_str = preg_replace("/[^\d]/","",$in_phone_text); // strip out non digits
+  $slen = strlen($out_str);
+  if ($slen == 10) {
+    $out_str = preg_replace("/^1?(\d{3})(\d{3})(\d{4})$/", "($1) $2-$3", $out_str);
+  }
+  if ($slen == 7) {
+    $out_str = preg_replace("/^1?(\d{3})(\d{4})$/", "$1-$2", $out_str);
+  }
+  return  $out_str;
+}
