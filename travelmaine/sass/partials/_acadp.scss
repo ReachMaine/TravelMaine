@@ -28,7 +28,10 @@
 
     }
     .acadp-listing-contactinfo {
-      font-size: .9em;
+      .acadp-listing-phone {
+        display: inline-block;
+        padding-left: 3px;
+      }
     }
 
     .acadp-listing-catline {

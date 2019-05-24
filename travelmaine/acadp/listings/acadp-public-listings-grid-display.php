@@ -111,16 +111,24 @@
 													}
 												}
 												if (array_key_exists("phone",$post_meta) ) {
-													if ($post_meta["phone"][0]){
+												 if ($post_meta["phone"][0]){
+													  $contact_info .= '<span class="glyphicon glyphicon-earphone"></span>';
 														$contact_info .= '<div class="acadp-listing-phone">'.$post_meta["phone"][0].'</div>';
 													}
+													/*	if( ! empty( $post_meta['phone'][0] ) ) {
+														echo '<span class="acadp-phone">';
+														echo '<span class="glyphicon glyphicon glyphicon-earphone"></span>&nbsp;';
+														echo '<span><a class="acadp-show-phone-number" href="javascript: void(0);">'.__( ' Show Phone Number', 'advanced-classifieds-and-directory-pro' ).'</a></span>';
+														echo '<span class="acadp-phone-number" style="display: none;">'.$post_meta['phone'][0].'</span>';
+														echo '</span>';
+													}*/
 												}
 												if (array_key_exists("website",$post_meta) ) {
 													if ($post_meta["website"][0]) {
 														$contact_info .= '<div class="acadp-listing-url">'.$post_meta["website"][0].'</div>';
 													}
 												}
-												echo '<div class="acadp-listing-contactinfo '.$hasthumb.'">';
+												echo '<div class="acadp-listing-contactinfo small '.$hasthumb.'">';
 												echo $contact_info;
 												echo '</div>';
 											?>
