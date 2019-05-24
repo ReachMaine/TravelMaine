@@ -1,0 +1,16 @@
+Default listing grid display:
+					<div class="thumbnail acadp-entry">
+                        <a href="https://www.reachmaine.info/gotravelmaine.com/acadp_listings/zigs-pirate-quilting/" class="acadp-responsive-container"><img src="https://www.reachmaine.info/gotravelmaine.com/wp-content/uploads/2019/05/Hydrangeas-300x225.jpg"></a>      	
+                                        
+                        <div class="caption">
+                            <div class="acadp-listings-title-block">
+                                <h3 class="acadp-no-margin"><a href="https://www.reachmaine.info/gotravelmaine.com/acadp_listings/zigs-pirate-quilting/">zig’s pirate B&amp;B</a></h3>
+                            </div>
+                            
+                            <p class="acadp-no-margin"><small class="text-muted"></small></p>                            
+                            <p class="acadp-listings-desc">stuff here for desciption....</p>
+                            <p class="acadp-no-margin">
+								<small><span class="glyphicon glyphicon-briefcase"></span>&nbsp;<a href="https://www.reachmaine.info/gotravelmaine.com/listing-category/stay/">Stay</a> / <span class="glyphicon glyphicon-map-marker"></span>&nbsp;<a href="https://www.reachmaine.info/gotravelmaine.com/listing-location/bangor-acadia-downeast/">Bangor / Acadia / Downeast</a></small>
+							</p>                            
+                        </div>
+                    </div>
