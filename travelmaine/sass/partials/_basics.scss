@@ -27,13 +27,13 @@
 }
 @media(min-width:768px) {
 	.rmm-vertical-tabs {
-		background-color: $travelme-dkgrey;
+		background-color: $travelme-ltgreen;
 		ul.et_pb_tabs_controls {
-			 background-color: $travelme-dkgrey;
+			 background-color: $travelme-ltgreen;
 			 float: left;
 			 width: 30%;
 			 display: block;
-
+			 margin-top: 30px;
 			 li {
 				  margin-left: -20px;
 					background-color: white;
@@ -67,7 +67,7 @@
 		.et_pb_all_tabs {
 		  display: flex;
 		  width: 70%;
-			background-color: $travelme-dkgrey;
+			background-color: $travelme-ltgreen;
 			.et_pb_tab {
 				 padding: 0px;
 			}
@@ -98,4 +98,18 @@
 .rmm-home-textblock {
 	padding: 20px;
 	background-color: $travelme-ltgreen;
+}
+
+.rmm-rotate_right {
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(7deg);
+}
+.rmm-rotate_left {
+  -ms-transform: rotate(-8deg); /* IE 9 */
+  -webkit-transform: rotate(-8deg); /* Safari */
+  transform: rotate(-8deg);
+}
+.rmm-up {
+	margin-top: -30px;
 }

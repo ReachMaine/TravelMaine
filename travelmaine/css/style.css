@@ -32,12 +32,13 @@
 
 @media (min-width: 768px) {
   .rmm-vertical-tabs {
-    background-color: #636363; }
+    background-color: #daf1e9; }
     .rmm-vertical-tabs ul.et_pb_tabs_controls {
-      background-color: #636363;
+      background-color: #daf1e9;
       float: left;
       width: 30%;
-      display: block; }
+      display: block;
+      margin-top: 30px; }
       .rmm-vertical-tabs ul.et_pb_tabs_controls li {
         margin-left: -20px;
         background-color: white;
@@ -63,7 +64,7 @@
     .rmm-vertical-tabs .et_pb_all_tabs {
       display: flex;
       width: 70%;
-      background-color: #636363; }
+      background-color: #daf1e9; }
       .rmm-vertical-tabs .et_pb_all_tabs .et_pb_tab {
         padding: 0px; } }
 @media (max-width: 767px) {
@@ -82,6 +83,23 @@
 .rmm-home-textblock {
   padding: 20px;
   background-color: #daf1e9; }
+
+.rmm-rotate_right {
+  -ms-transform: rotate(7deg);
+  /* IE 9 */
+  -webkit-transform: rotate(7deg);
+  /* Safari */
+  transform: rotate(7deg); }
+
+.rmm-rotate_left {
+  -ms-transform: rotate(-8deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-8deg);
+  /* Safari */
+  transform: rotate(-8deg); }
+
+.rmm-up {
+  margin-top: -30px; }
 
 /* custom styling for acadp */
 .acadp .thumbnail.acadp-entry {
