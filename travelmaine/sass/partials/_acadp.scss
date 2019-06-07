@@ -1,12 +1,13 @@
 /* custom styling for acadp */
 
+// listings - grid view+
 .acadp {
   .thumbnail.acadp-entry { // listing in grid view
     padding: 6px 4px 4px 6px;
 
     .acadp-listings-title-block {  // Title block = title & subtitle
       padding-bottom: 4px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid $travelme-divider;
       margin-bottom: 6px;
       text-align: center;
     }
@@ -25,7 +26,7 @@
     }
     .acadp-listing-contactinfo.hasthumb {
       margin-top: 6px;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid $travelme-divider;
 
     }
     .acadp-listing-contactinfo {
@@ -40,5 +41,27 @@
     .acadp-listing-catline {
       clear: both;
     }
+  }
+}
+
+// listings = home view
+.acadp.acadp-listings.acadp-home-view {
+  .acadp-entry {
+      background-color: white;
+      padding: 0px 0px 0px 0px;
+      border: 0px;
+      .acadp-listing-image {
+        width: 100%;
+        border-bottom: 1px solid $travelme-divider;
+      }
+      .acadp-listings-title-block {
+        padding-top: 10px;
+        border-bottom: 0px;
+      }
+      .acadp-listings-title-block,
+      .acadp-listing-contactinfo {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
   }
 }

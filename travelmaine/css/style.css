@@ -130,4 +130,19 @@
   .acadp .thumbnail.acadp-entry .acadp-listing-catline {
     clear: both; }
 
+.acadp.acadp-listings.acadp-home-view .acadp-entry {
+  background-color: white;
+  padding: 0px 0px 0px 0px;
+  border: 0px; }
+  .acadp.acadp-listings.acadp-home-view .acadp-entry .acadp-listing-image {
+    width: 100%;
+    border-bottom: 1px solid #ddd; }
+  .acadp.acadp-listings.acadp-home-view .acadp-entry .acadp-listings-title-block {
+    padding-top: 10px;
+    border-bottom: 0px; }
+  .acadp.acadp-listings.acadp-home-view .acadp-entry .acadp-listings-title-block,
+  .acadp.acadp-listings.acadp-home-view .acadp-entry .acadp-listing-contactinfo {
+    padding-left: 6px;
+    padding-right: 6px; }
+
 /* **** media **** */
