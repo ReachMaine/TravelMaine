@@ -103,25 +103,26 @@
 
 /* custom styling for acadp */
 .acadp .thumbnail.acadp-entry {
-  padding: 6px 4px 4px 6px; }
-  .acadp .thumbnail.acadp-entry .acadp-listings-title-block {
-    padding-bottom: 4px;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 6px;
-    text-align: center; }
-  .acadp .thumbnail.acadp-entry .acadp-listing-subtitle {
-    clear: both;
-    font-style: italic;
-    padding-left: 4px;
-    text-align: center; }
+  background-color: white;
+  padding: 0px 0px 0px 0px;
+  border: 0px; }
   .acadp .thumbnail.acadp-entry .acadp-listing-image {
-    width: 80%;
-    margin: auto; }
-    .acadp .thumbnail.acadp-entry .acadp-listing-image a {
-      background-color: transparent; }
-  .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo.hasthumb {
-    margin-top: 6px;
-    border-top: 1px solid #ddd; }
+    width: 100%;
+    border-bottom: 1px solid #ddd; }
+    .acadp .thumbnail.acadp-entry .acadp-listing-image .acadp-responsive-container {
+      background-color: white; }
+  .acadp .thumbnail.acadp-entry .acadp-listings-title-block {
+    padding-top: 10px;
+    border-bottom: 0px; }
+    .acadp .thumbnail.acadp-entry .acadp-listings-title-block .acadp-listing-subtitle {
+      clear: both;
+      font-style: italic;
+      padding-left: 4px;
+      text-align: center; }
+  .acadp .thumbnail.acadp-entry .acadp-listings-title-block,
+  .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo {
+    padding-left: 6px;
+    padding-right: 6px; }
   .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo {
     padding-top: 10px; }
     .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo .acadp-listing-phone {
@@ -130,19 +131,24 @@
   .acadp .thumbnail.acadp-entry .acadp-listing-catline {
     clear: both; }
 
-.acadp.acadp-listings.acadp-home-view .acadp-entry {
-  background-color: white;
-  padding: 0px 0px 0px 0px;
-  border: 0px; }
-  .acadp.acadp-listings.acadp-home-view .acadp-entry .acadp-listing-image {
-    width: 100%;
-    border-bottom: 1px solid #ddd; }
-  .acadp.acadp-listings.acadp-home-view .acadp-entry .acadp-listings-title-block {
-    padding-top: 10px;
-    border-bottom: 0px; }
-  .acadp.acadp-listings.acadp-home-view .acadp-entry .acadp-listings-title-block,
-  .acadp.acadp-listings.acadp-home-view .acadp-entry .acadp-listing-contactinfo {
-    padding-left: 6px;
-    padding-right: 6px; }
+.acadp.acadp-listings.acadp-home-view {
+  /* .acadp-entry {
+      background-color: white;
+      padding: 0px 0px 0px 0px;
+      border: 0px;
+      .acadp-listing-image {
+        width: 100%;
+        border-bottom: 1px solid $travelme-divider;
+      }
+      .acadp-listings-title-block {
+        padding-top: 10px;
+        border-bottom: 0px;
+      }
+      .acadp-listings-title-block,
+      .acadp-listing-contactinfo {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+  } */ }
 
 /* **** media **** */
