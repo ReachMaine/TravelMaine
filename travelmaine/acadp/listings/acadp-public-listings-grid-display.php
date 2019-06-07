@@ -120,7 +120,8 @@
 													if ($post_meta["website"][0]) {
 														//$contact_info .= '<div class="acadp-listing-url">'.$post_meta["website"][0].'</div>';
 														$contact_info .= '<div class="acadp-listing-url">';
-														$contact_info .= '<a target="_blank" href="'.$post_meta["website"][0].'">website <span class="glyphicon glyphicon-circle-arrow-right"></span></a>';
+													  $contact_info .= '<span class="glyphicon glyphicon-globe">';
+														$contact_info .= '<a target="_blank" href="'.$post_meta["website"][0].'"></span>website <span class="glyphicon glyphicon-circle-arrow-right"></span></a>';
 														$contact_info .= '</div>';
 													}
 												}

@@ -105,11 +105,12 @@
 								<?php endif; ?>
 						</div>
             <!-- Custom fields -->
-            <?php if( count( $fields ) ) : ?>
+            <?php if( count( $fields )  && false ) : ?>
                 <ul class="list-group acadp-margin-bottom">
-                    <?php foreach( $fields as $field )  : ?>
-
-                        <?php if( ! empty( $post_meta[ $field->ID ][0] ) && ($field->ID == "216") ) : ?>
+									<?php /* echo "<pre>";  var_dump($fields); echo "</pre>";  */ ?>
+                    <?php foreach( $fields as $field )  :
+											echo "field -> ID is: ".$field->ID."~"; ?>
+                        <?php if ( ! empty( $post_meta[ $field->ID ][0] )  ) :  ?>
                             <li class="list-group-item acadp-no-margin-left acadp-field-<?php echo $field->type; ?>">
                                 <span class="text-primary"><?php echo $field->post_title; ?></span> :
                                 <span class="text-muted">
