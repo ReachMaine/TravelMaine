@@ -80,6 +80,15 @@
 
                 <div class="<?php echo $span; ?>">
                     <div <?php the_acadp_listing_entry_class( $post_meta, 'thumbnail' ); ?>>
+											<div class="acadp-listing-image">
+												<?php
+													$hasthumb = "";
+													if ( $can_show_images  &&  (isset( $post_meta['images'])) ) {
+														$hasthumb = "hasthumb"; ?>
+														<a href="<?php the_permalink(); ?>" class="acadp-responsive-container"><?php the_acadp_listing_thumbnail( $post_meta ); ?></a>
+
+												<?php } ?>
+											</div>
 											<div class="acadp-listings-title-block">
 													<h4 class="acadp-no-margin"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
@@ -94,14 +103,7 @@
 													?>
 													<?php the_acadp_listing_labels( $post_meta ); ?>
 											</div>
-											<div class="acadp-listing-image">
-                        <?php
-													$hasthumb = "";
-													if ( $can_show_images  &&  (isset( $post_meta['images'])) ) {
-														$hasthumb = "hasthumb"; ?>
-                            <a href="<?php the_permalink(); ?>" class="acadp-responsive-containerX"><?php the_acadp_listing_thumbnail( $post_meta ); ?></a>
-                        <?php } ?>
-											</div>
+
 											<?php /* contact info - address, phone website */
 												$contact_info = "";
 
