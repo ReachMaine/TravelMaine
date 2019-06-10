@@ -90,7 +90,13 @@
 												<?php } ?>
 											</div>
 											<div class="acadp-listings-title-block">
-													<h4 class="acadp-no-margin"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+												<?php /* show category icon */
+
+												$cat_glyph = '<span class="glyphicon glyphicon-briefcase"></span>';
+												$cat_glyph = rmm_get_category_icon( $post->ID);
+												?>
+													<h4 class="acadp-no-margin"><?php echo '<small>'.$cat_glyph.'</small>';?>&nbsp;<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
 													<?php
 														//echo "<pre>"; var_dump($post_meta); echo "</pre>";
@@ -109,21 +115,26 @@
 
 												if (array_key_exists("address",$post_meta) ) {
 													if ($post_meta["address"][0]) {
-														$contact_info .= '<div class="acadp-listing-addr">'.$post_meta["address"][0].'</div>';
+														$contact_info .= '<div class="acadp-listing-addr">';
+														$contact_info .=  '<span class="glyphicon glyphicon-map-marker"></span>';
+														$contact_info .= $post_meta["address"][0];
+														$contact_info .= '</div>';
 													}
 												}
 												if (array_key_exists("phone",$post_meta) ) {
 												 if ($post_meta["phone"][0]){
+													 	$contact_info .= '<div class="acadp-listing-phone">';
 													  $contact_info .= '<span class="glyphicon glyphicon-earphone"></span>';
-														$contact_info .= '<div class="acadp-listing-phone">'.format_phone($post_meta["phone"][0]).'</div>';
+														$contact_info .= format_phone($post_meta["phone"][0]);
+														$contact_info .= '</div>';
 													}
 												}
 												if (array_key_exists("website",$post_meta) ) {
 													if ($post_meta["website"][0]) {
 														//$contact_info .= '<div class="acadp-listing-url">'.$post_meta["website"][0].'</div>';
 														$contact_info .= '<div class="acadp-listing-url">';
-													  $contact_info .= '<span class="glyphicon glyphicon-globe">';
-														$contact_info .= '<a target="_blank" href="'.$post_meta["website"][0].'"></span>website <span class="glyphicon glyphicon-circle-arrow-right"></span></a>';
+													  $contact_info .= '<span class="glyphicon glyphicon-globe"></span>';
+														$contact_info .= '<a target="_blank" href="'.$post_meta["website"][0].'">website</a>';
 														$contact_info .= '</div>';
 													}
 												}
@@ -137,7 +148,7 @@
                                 $info = array();
 
                                 if( $can_show_category && $category = wp_get_object_terms( $post->ID, 'acadp_categories' ) ) {
-                                    $info[] = '<span class="glyphicon glyphicon-briefcase"></span>&nbsp;<a href="'.acadp_get_category_page_link( $category[0] ).'">'.$category[0]->name.'</a>';
+                                    $info[] = $cat_glyph.'&nbsp;<a href="'.acadp_get_category_page_link( $category[0] ).'">'.$category[0]->name.'</a>';
                                 }
 
                                 if( $can_show_location && $location = wp_get_object_terms( $post->ID, 'acadp_locations' ) ) {

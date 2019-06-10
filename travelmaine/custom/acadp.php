@@ -37,3 +37,27 @@ function format_phone($in_phone_text) {
   }
   return  $out_str;
 }
+
+function rmm_get_category_icon ($in_postid) {
+  $out_str = '<span class="glyphicon glyphicon-briefcase"></span>';
+  $category = wp_get_object_terms( $in_postid, 'acadp_categories' );
+  if ( $category ) {
+      switch ($category[0]->slug) {
+        case 'dine':
+          $out_str = '<span class="glyphicon glyphicon-cutlery"></span>';
+          break;
+        case 'shop':
+          $out_str = '<span class="glyphicon glyphicon-gift"></span>';
+          break;
+        case 'play':
+          $out_str = '<span class="glyphicon glyphicon-sunglasses"></span>';
+          break;
+        case 'stay':
+          $out_str = '<span class="glyphicon glyphicon-bed"></span>';
+          break;
+        case 'pets':
+          break;
+      }
+  }
+  return $out_str;
+}
