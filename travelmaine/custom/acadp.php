@@ -56,6 +56,7 @@ function rmm_get_category_icon ($in_postid) {
           $out_str = '<span class="glyphicon glyphicon-bed"></span>';
           break;
         case 'pets':
+          $out_str = '<span class="glyphicon glyphicon-check"></span>';
           break;
       }
   }

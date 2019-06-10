@@ -25,6 +25,11 @@
 		}
 	}
 }
+
+// reveal buttons 
+.rv_button.closed:after {content:"\33";}
+.rv_button.opened:after{content:"\32";}
+
 @media(min-width:768px) {
 	.rmm-vertical-tabs {
 		background-color: $travelme-ltgreen;

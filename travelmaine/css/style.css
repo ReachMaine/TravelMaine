@@ -30,6 +30,12 @@
 .rmm-vertical-tabs .et_pb_all_tabs .et_pb_tab {
   padding: 0px; }
 
+.rv_button.closed:after {
+  content: "\33"; }
+
+.rv_button.opened:after {
+  content: "\32"; }
+
 @media (min-width: 768px) {
   .rmm-vertical-tabs {
     background-color: #daf1e9; }
@@ -107,27 +113,27 @@
   padding: 0px 0px 0px 0px;
   border: 0px; }
   .acadp .thumbnail.acadp-entry .acadp-listing-image {
-    width: 100%;
-    border-bottom: 1px solid #ddd; }
+    width: 100%; }
     .acadp .thumbnail.acadp-entry .acadp-listing-image .acadp-responsive-container {
       background-color: white; }
   .acadp .thumbnail.acadp-entry .acadp-listings-title-block {
+    border-bottom: 1px solid #ddd;
     padding-top: 10px;
     border-bottom: 0px; }
     .acadp .thumbnail.acadp-entry .acadp-listings-title-block .acadp-listing-subtitle {
       clear: both;
       font-style: italic;
-      padding-left: 4px;
-      text-align: center; }
+      padding-left: 4px; }
   .acadp .thumbnail.acadp-entry .acadp-listings-title-block,
   .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo {
     padding-left: 6px;
     padding-right: 6px; }
   .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo {
     padding-top: 10px; }
+    .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo .glyphicon {
+      padding-right: 3px; }
     .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo .acadp-listing-phone {
-      display: inline-block;
-      padding-left: 3px; }
+      display: inline-block; }
   .acadp .thumbnail.acadp-entry .acadp-listing-catline {
     clear: both; }
 

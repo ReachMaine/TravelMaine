@@ -113,3 +113,16 @@ jQuery(function ($) {
     }// end of hide_maps_desc function
 
 });
+// a "show more"/reveal rv_button
+// 1.  add module with ID of reveal that is initially hidden
+// 2. add button with class rv_button
+// 3 need css for button
+ jQuery(document).ready(function() {
+// Hide the div
+  jQuery('#reveal').hide();
+  jQuery('.rv_button').click(function(e) {
+    e.preventDefault();
+    jQuery("#reveal").slideToggle();
+    jQuery('.rv_button').toggleClass('opened closed');
+    });
+});

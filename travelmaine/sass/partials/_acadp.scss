@@ -8,20 +8,20 @@
         border: 0px;
         .acadp-listing-image {
           width: 100%;
-          border-bottom: 1px solid $travelme-divider;
+          //border-bottom: 1px solid $travelme-divider;
           .acadp-responsive-container {
             background-color: white;
           }
         }
         .acadp-listings-title-block {
-
+          border-bottom: 1px solid $travelme-divider;
           padding-top: 10px;
           border-bottom: 0px;
           .acadp-listing-subtitle {
             clear: both;
             font-style: italic;
             padding-left: 4px;
-            text-align: center;
+            //text-align: center;
           }
         }
         .acadp-listings-title-block,
@@ -31,10 +31,12 @@
         }
         .acadp-listing-contactinfo {
           padding-top: 10px;
-
+          .glyphicon {
+            padding-right: 3px;
+          }
           .acadp-listing-phone {
             display: inline-block;
-            padding-left: 3px; // space for gliphicon
+            //padding-left: 3px; // space for gliphicon
           }
         }
 
