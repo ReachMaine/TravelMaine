@@ -69,7 +69,7 @@
     <div class="acadp-body">
 		<?php
             $columns = $listings_settings['columns'];
-            $span = 'col-md-' . floor( 12 / $columns );
+            $span = 'col-md-' . floor( 12 / $columns )." col-sm-6";
             $i = 0;
 
         	while( $acadp_query->have_posts() ) : $acadp_query->the_post(); $post_meta = get_post_meta( $post->ID ); ?>
