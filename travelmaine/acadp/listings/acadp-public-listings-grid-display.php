@@ -63,7 +63,7 @@
 		</div>
     <?php endif; ?>
 
-	<div class="acadp-divider"></div>
+	<!--div class="acadp-divider"></div-->
 
 	<!-- the loop -->
     <div class="acadp-body">
@@ -75,7 +75,7 @@
         	while( $acadp_query->have_posts() ) : $acadp_query->the_post(); $post_meta = get_post_meta( $post->ID ); ?>
 
             <?php if( $i % $columns == 0 ) : ?>
-                <div class="row">
+                <div class="row row-eq-height">
             <?php endif; ?>
 
                 <div class="<?php echo $span; ?>">
@@ -87,7 +87,9 @@
 														$hasthumb = "hasthumb"; ?>
 														<a href="<?php the_permalink(); ?>" class="acadp-responsive-container"><?php the_acadp_listing_thumbnail( $post_meta ); ?></a>
 
-												<?php } ?>
+												<?php }  else {
+													echo '<div class="acadp-responsive-container"></div>'; 
+												}?>
 											</div>
 											<div class="acadp-listings-title-block">
 

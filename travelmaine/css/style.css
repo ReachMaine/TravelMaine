@@ -108,6 +108,12 @@
   margin-top: -30px; }
 
 /* custom styling for acadp */
+.acadp .row.row-eq-height {
+  display: flex;
+  margin-bottom: 20px; }
+  .acadp .row.row-eq-height .col-md3 .thumbnail.acadp-entry, .acadp .row.row-eq-height .col-sm-6 .thumbnail.acadp-entry {
+    height: 100%; }
+
 .acadp .thumbnail.acadp-entry {
   background-color: white;
   padding: 0px 0px 0px 0px;
@@ -115,7 +121,7 @@
   .acadp .thumbnail.acadp-entry .acadp-listing-image {
     width: 100%; }
     .acadp .thumbnail.acadp-entry .acadp-listing-image .acadp-responsive-container {
-      background-color: white; }
+      background-color: transparent; }
   .acadp .thumbnail.acadp-entry .acadp-listings-title-block {
     border-bottom: 1px solid #ddd;
     padding-top: 10px;
