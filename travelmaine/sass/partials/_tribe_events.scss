@@ -1,0 +1,51 @@
+/* styling for tribe events & events calendar shortcode */
+// short code (on home page)
+// shortcode regardless of size
+ul.ecs-event-list {
+  li.ecs-event {
+    h4.entry-title {
+      font-weight: bold;
+    }
+    //background-color: red;
+    list-style: none;
+    padding-bottom: 10px;
+  }
+    li.ecs-event:not(:last-child) {
+      padding-right: 1%;
+    }
+}
+
+// 2 accross at tablet
+@media only all  and (min-width: 768px) {
+  ul.ecs-event-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    li.ecs-event {
+      //background-color: red;
+      list-style: none;
+      width: 50%;
+      //flex-grow: 1;
+    }
+      li.ecs-event:not(:last-child) {
+        //padding-right: 1%;
+      }
+  }
+}
+//4 accross at big
+@media only all  and (min-width: 992px) {
+  ul.ecs-event-list {
+
+    flex-wrap: nowrap;
+    li.ecs-event {
+      //background-color: red;
+      list-style: none;
+      width: 25%;
+      //flex-grow: 1;
+    }
+      li.ecs-event:not(:last-child) {
+        //padding-right: 1%;
+      }
+  }
+}
