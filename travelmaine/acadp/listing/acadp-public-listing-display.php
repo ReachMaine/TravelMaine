@@ -49,7 +49,7 @@
                     $meta = array();
 
                     if( $can_show_category ) {
-                        $meta[] = sprintf( '<span class="glyphicon glyphicon-briefcase"></span>&nbsp;<a href="%s">%s</a>', acadp_get_category_page_link( $category ), $category->name );
+												$meta[] = sprintf( rmm_get_category_icon( $post->ID).'&nbsp;<a href="%s">%s</a>', acadp_get_category_page_link( $category ), $category->name );
                     }
 
                     if( count( $usermeta ) ) {
