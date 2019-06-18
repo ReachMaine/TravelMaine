@@ -16,11 +16,11 @@
 							$images = unserialize( $post_meta['images'][0] );
 							$image_attributes = wp_get_attachment_image_src( $images[0], 'large' ); ?>
 							<p><img src="<?php echo $image_attributes[0]; ?>" /></p>
-							</div>
+					</div>
 				<?php } /* end images */ ?>
 
 					<!-- Title & location -->
-        <div class="<?php echo $can_show_images ? 'col-md-9' : 'col-md-12'; ?>">
+        <div class="<?php echo $can_show_images ? 'col-md-3' : 'col-md-6'; ?>">
 
             <div class="acadp-post-title">
                 <h1 class="acadp-no-margin"><?php echo $post->post_title; ?></h1>
@@ -87,6 +87,20 @@
                 </div>
             <?php endif; ?>
 					</div> <!-- end col 9/12 -->
+					<!-- map -->
+					<div class="col-md-6">
+						<?php if( $can_show_map && ($post_meta['address'][0] != "") ) :
+									 //echo '<p> lat is:{'.$post_meta['latitude'][0].'} and lon is: {'.$post_meta['longitude'][0].'}</p>';
+									 //echo '<p>address is:{'.$post_meta['address'][0].'}</p>';
+									 //echo '<pre>';var_dump($post_meta['address'][0]); echo '</pre>';
+									 ?>
+									<div class="embed-responsive embed-responsive-16by9 acadp-margin-bottom">
+											<div class="acadp-map embed-responsive-item">
+													<div class="marker" data-latitude="<?php echo $post_meta['latitude'][0]; ?>" data-longitude="<?php echo $post_meta['longitude'][0]; ?>"></div>
+											</div>
+									</div>
+							<?php endif; ?>
+					</div>
           <div class="clearfix"></div>
 
 
@@ -94,16 +108,7 @@
 						<div class="col-md-9">
 	            <?php echo $description; ?>
 						</div>
-						<!-- map -->
-						<div class="col-md-3">
-							<?php if( $can_show_map ) : ?>
-										<div class="embed-responsive embed-responsive-16by9 acadp-margin-bottom">
-												<div class="acadp-map embed-responsive-item">
-														<div class="marker" data-latitude="<?php echo $post_meta['latitude'][0]; ?>" data-longitude="<?php echo $post_meta['longitude'][0]; ?>"></div>
-												</div>
-										</div>
-								<?php endif; ?>
-						</div>
+
             <!-- Custom fields -->
             <?php if( count( $fields )  && false ) : ?>
                 <ul class="list-group acadp-margin-bottom">
