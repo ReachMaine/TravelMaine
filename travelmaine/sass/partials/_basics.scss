@@ -26,15 +26,15 @@
 	}
 }
 
-// reveal buttons 
+// reveal buttons
 .rv_button.closed:after {content:"\33";}
 .rv_button.opened:after{content:"\32";}
 
 @media(min-width:768px) {
 	.rmm-vertical-tabs {
-		background-color: $travelme-ltgreen;
+		//background-color: $travelme-ltgreen;
 		ul.et_pb_tabs_controls {
-			 background-color: $travelme-ltgreen;
+			// background-color: $travelme-ltgreen;
 			 float: left;
 			 width: 30%;
 			 display: block;
@@ -72,7 +72,7 @@
 		.et_pb_all_tabs {
 		  display: flex;
 		  width: 70%;
-			background-color: $travelme-ltgreen;
+			//background-color: $travelme-ltgreen;
 			.et_pb_tab {
 				 padding: 0px;
 			}
@@ -102,7 +102,7 @@
 // text blocks under the tabs
 .rmm-home-textblock {
 	padding: 20px;
-	background-color: $travelme-ltgreen;
+	//background-color: $travelme-ltgreen;
 }
 
 .rmm-rotate_right {
