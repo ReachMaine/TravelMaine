@@ -3,18 +3,64 @@
 // shortcode regardless of size
 ul.ecs-event-list {
   li.ecs-event {
-    h4.entry-title {
-      font-weight: bold;
-    }
     //background-color: red;
     list-style: none;
     padding-bottom: 10px;
+
+    .date_thumb {
+      height: 60px;
+      width: 60px;
+      display: inline-block;
+      border-color: $travelme-ltgreen;
+      border-left: 3px solid $travelme-orange-hilite;
+      border-right: 1px solid $travelme-orange-hilite;
+      border-top: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+      text-align: center;
+    }
+
+    h4.entry-title {
+      padding-top: 8px;
+      padding-left: 6px;
+      padding-bottom: 0px;
+      font-weight: bold;
+      display: inline-block;
+      min-height:60px;
+      width: 78%;
+      background-color: black;
+      color: white;
+      vertical-align: top;
+      line-height: 1.4em;
+    }
+
+    .ecs-excerpt {
+      clear: both;
+      padding-top: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid lightgrey;
+    }
+    .travelme-esc-venue {
+      padding-left: 20px;
+
+    }
+    .duration.time {
+//      border-top: 1px solid lightgrey;
+      padding-left: 20px;
+    }
+
   }
     li.ecs-event:not(:last-child) {
       padding-right: 1%;
     }
 }
+.ecs-all-events {
+  padding: 20px;
+  border: 2px solid $travelme-green;
+  a {
+      color: $travelme-green;
+  }
 
+}
 // 2 accross at tablet
 @media only all  and (min-width: 768px) {
   ul.ecs-event-list {
@@ -23,8 +69,6 @@ ul.ecs-event-list {
     justify-content: space-evenly;
     flex-wrap: wrap;
     li.ecs-event {
-      //background-color: red;
-      list-style: none;
       width: 50%;
       //flex-grow: 1;
     }
@@ -41,7 +85,7 @@ ul.ecs-event-list {
     li.ecs-event {
       //background-color: red;
       list-style: none;
-      width: 25%;
+      //width: 25%;
       //flex-grow: 1;
     }
       li.ecs-event:not(:last-child) {

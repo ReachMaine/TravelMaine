@@ -32,3 +32,17 @@ add_filter ('ecs_event_title_tag_end','travelmaine_esc_title_start');
 function travelmaine_esc_title_start ($in_title_string) {
   return '<yep, zig here2</p>';
 } */
+
+// wrap venue in div s.t. we can style it.
+add_filter ('ecs_event_venue_tag_start','travelmaine_esc_venue_start');
+function travelmaine_esc_venue_start ($in_string) {
+  return '<div class="travelme-esc-venue"'.$in_string;
+}
+add_filter ('ecs_event_venue_tag_end','travelmaine_esc_enddiv');
+function travelmaine_esc_enddiv ($in_string) {
+  return $in_string."</div>";
+}
+add_filter ('ecs_event_venue_at_text','travelmaine_esc_nope');
+function travelmaine_esc_nope($in_string) {
+  return "";
+}

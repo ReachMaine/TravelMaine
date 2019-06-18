@@ -25,7 +25,7 @@
     height: 100%; }
 
 .rmm-border-green {
-  border: 1px solid #44bb92; }
+  border: 1px solid #13ca91; }
 
 .rmm-vertical-tabs .et_pb_all_tabs .et_pb_tab {
   padding: 0px; }
@@ -162,10 +162,45 @@
 ul.ecs-event-list li.ecs-event {
   list-style: none;
   padding-bottom: 10px; }
+  ul.ecs-event-list li.ecs-event .date_thumb {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border-color: #daf1e9;
+    border-left: 3px solid #FF9800;
+    border-right: 1px solid #FF9800;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    text-align: center; }
   ul.ecs-event-list li.ecs-event h4.entry-title {
-    font-weight: bold; }
+    padding-top: 8px;
+    padding-left: 6px;
+    padding-bottom: 0px;
+    font-weight: bold;
+    display: inline-block;
+    min-height: 60px;
+    width: 78%;
+    background-color: black;
+    color: white;
+    vertical-align: top;
+    line-height: 1.4em; }
+  ul.ecs-event-list li.ecs-event .ecs-excerpt {
+    clear: both;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid lightgrey; }
+  ul.ecs-event-list li.ecs-event .travelme-esc-venue {
+    padding-left: 20px; }
+  ul.ecs-event-list li.ecs-event .duration.time {
+    padding-left: 20px; }
 ul.ecs-event-list li.ecs-event:not(:last-child) {
   padding-right: 1%; }
+
+.ecs-all-events {
+  padding: 20px;
+  border: 2px solid #13ca91; }
+  .ecs-all-events a {
+    color: #13ca91; }
 
 @media only all and (min-width: 768px) {
   ul.ecs-event-list {
@@ -174,12 +209,10 @@ ul.ecs-event-list li.ecs-event:not(:last-child) {
     justify-content: space-evenly;
     flex-wrap: wrap; }
     ul.ecs-event-list li.ecs-event {
-      list-style: none;
       width: 50%; } }
 @media only all and (min-width: 992px) {
   ul.ecs-event-list {
     flex-wrap: nowrap; }
     ul.ecs-event-list li.ecs-event {
-      list-style: none;
-      width: 25%; } }
+      list-style: none; } }
 /* **** media **** */
