@@ -1,4 +1,7 @@
 /* basic css stuff */
+a.travelme-link-alt {
+	color: $travelme-link-alt;
+}
 .reach-responsive-video {
 	position: relative;
 	padding-bottom: 50.25%;
@@ -19,9 +22,27 @@
 }
 // styling to make the tabs of a tab module on the side instead of at the top - at desktop
 .rmm-vertical-tabs { // this is for both desktop & mobile
+	ul.et_pb_tabs_controls {
+			background-color: $travelme-dkgrey;
+			 li {
+				 a {
+					 display: block;
+					 width: 100%;
+					 padding: 10px 10px 10px 20px ;
+					 font-size: 15px;
+					 text-transform: uppercase;
+				 }
+			 }
+		}
+  ul.et_pb_tabs_controls:after {
+			content: none;
+			border-top: 0px;
+		}
 	.et_pb_all_tabs {
+		background-color: $travelme-dkgrey;
 		.et_pb_tab {
 			 padding: 0px;
+			 background-color: $travelme-dkgrey;
 		}
 	}
 }
@@ -34,7 +55,6 @@
 	.rmm-vertical-tabs {
 		//background-color: $travelme-ltgreen;
 		ul.et_pb_tabs_controls {
-			// background-color: $travelme-ltgreen;
 			 float: left;
 			 width: 30%;
 			 display: block;
@@ -50,13 +70,7 @@
 					height: auto!important;
 					margin-bottom: 0px;
 					//margin-bottom: 5px;
-					a {
-						display: block;
-						width: 100%;
-					  padding: 10px 10px 10px 20px ;
-					  font-size: 15px;
-						text-transform: uppercase;
-					}
+
 			}
 			li:not(.et_pb_tab_active):last-child {
 				border-right: 1px solid #d9d9d9;
@@ -66,9 +80,7 @@
 				border-bottom: 1px solid #d9d9d9;
 			}
 		}
-		.custom-tabs ul.et_pb_tabs_controls:after {
-			content: none;
-		}
+
 		.et_pb_all_tabs {
 		  display: flex;
 		  width: 70%;
@@ -84,6 +96,15 @@
 
 }
 @media(max-width:767px) {
+		.rmm-vertical-tabs {
+			.et_pb_all_tabs {
+				.et_pb_tab {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
 	/*.rmm-vertical-tabs ul.et_pb_tabs_controls.clearfix {
 	  float: left;
 	  width: 100%;
@@ -117,4 +138,16 @@
 }
 .rmm-up {
 	margin-top: -30px;
+}
+// list block for towns on region landing pages
+ul.travelme-town-list {
+	list-style: none;
+	display: inline-flex;
+	flex-wrap: wrap;
+
+	li {
+		a {
+			color: $travelme-link-alt;
+		}
+	}
 }

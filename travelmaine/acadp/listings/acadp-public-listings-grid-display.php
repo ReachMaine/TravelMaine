@@ -88,7 +88,7 @@
 														<a href="<?php the_permalink(); ?>" class="acadp-responsive-container"><?php the_acadp_listing_thumbnail( $post_meta ); ?></a>
 
 												<?php }  else {
-													echo '<div class="acadp-responsive-container"></div>'; 
+													echo '<div class="acadp-responsive-container"></div>';
 												}?>
 											</div>
 											<div class="acadp-listings-title-block">
@@ -121,6 +121,8 @@
 														$contact_info .=  '<span class="glyphicon glyphicon-map-marker"></span>';
 														$contact_info .= $post_meta["address"][0];
 														$contact_info .= '</div>';
+														$gmap_link = "";
+														$contact_info .= '<a href="'.$map_link.'">mapit</a>';
 													}
 												}
 												if (array_key_exists("phone",$post_meta) ) {

@@ -10,6 +10,9 @@
 /* ----------- Colors ---------------------------------- */
 /* ----------- end Colors ----------- */
 /* basic css stuff */
+a.travelme-link-alt {
+  color: #000; }
+
 .reach-responsive-video {
   position: relative;
   padding-bottom: 50.25%;
@@ -27,8 +30,22 @@
 .rmm-border-green {
   border: 1px solid #13ca91; }
 
-.rmm-vertical-tabs .et_pb_all_tabs .et_pb_tab {
-  padding: 0px; }
+.rmm-vertical-tabs ul.et_pb_tabs_controls {
+  background-color: #4e4e50; }
+  .rmm-vertical-tabs ul.et_pb_tabs_controls li a {
+    display: block;
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+    font-size: 15px;
+    text-transform: uppercase; }
+.rmm-vertical-tabs ul.et_pb_tabs_controls:after {
+  content: none;
+  border-top: 0px; }
+.rmm-vertical-tabs .et_pb_all_tabs {
+  background-color: #4e4e50; }
+  .rmm-vertical-tabs .et_pb_all_tabs .et_pb_tab {
+    padding: 0px;
+    background-color: #4e4e50; }
 
 .rv_button.closed:after {
   content: "\33"; }
@@ -52,24 +69,19 @@
       border-style: solid;
       height: auto !important;
       margin-bottom: 0px; }
-      .rmm-vertical-tabs ul.et_pb_tabs_controls li a {
-        display: block;
-        width: 100%;
-        padding: 10px 10px 10px 20px;
-        font-size: 15px;
-        text-transform: uppercase; }
     .rmm-vertical-tabs ul.et_pb_tabs_controls li:not(.et_pb_tab_active):last-child {
       border-right: 1px solid #d9d9d9; }
     .rmm-vertical-tabs ul.et_pb_tabs_controls li:last-child {
       border-bottom: 1px solid #d9d9d9; }
-  .rmm-vertical-tabs .custom-tabs ul.et_pb_tabs_controls:after {
-    content: none; }
   .rmm-vertical-tabs .et_pb_all_tabs {
     display: flex;
     width: 70%; }
     .rmm-vertical-tabs .et_pb_all_tabs .et_pb_tab {
       padding: 0px; } }
 @media (max-width: 767px) {
+  .rmm-vertical-tabs .et_pb_all_tabs .et_pb_tab img {
+    width: 100%; }
+
   /*.rmm-vertical-tabs ul.et_pb_tabs_controls.clearfix {
     float: left;
     width: 100%;
@@ -102,13 +114,20 @@
 .rmm-up {
   margin-top: -30px; }
 
-/* custom styling for acadp */
-.acadp .row.row-eq-height {
-  display: flex;
-  margin-bottom: 20px; }
-  .acadp .row.row-eq-height .col-md3 .thumbnail.acadp-entry, .acadp .row.row-eq-height .col-sm-6 .thumbnail.acadp-entry {
-    height: 100%; }
+ul.travelme-town-list {
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: wrap; }
+  ul.travelme-town-list li a {
+    color: #000; }
 
+/* custom styling for acadp */
+@media all and (min-width: 992px) {
+  .acadp .row.row-eq-height {
+    display: flex;
+    margin-bottom: 20px; }
+    .acadp .row.row-eq-height .col-md3 .thumbnail.acadp-entry, .acadp .row.row-eq-height .col-sm-6 .thumbnail.acadp-entry {
+      height: 100%; } }
 .acadp .thumbnail.acadp-entry {
   background-color: white;
   padding: 0px 0px 0px 0px;
@@ -215,4 +234,10 @@ ul.ecs-event-list li.ecs-event:not(:last-child) {
     flex-wrap: nowrap; }
     ul.ecs-event-list li.ecs-event {
       list-style: none; } }
+#main-header {
+  background-color: rgba(255, 255, 255, 0.431372549); }
+
 /* **** media **** */
+@media all and (min-width: 981px) {
+  body.home #et-main-area #main-content article {
+    margin-top: -112.5px; } }

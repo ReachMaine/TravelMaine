@@ -1,14 +1,16 @@
 /* custom styling for acadp */
 
 // listings - grid view+
-.acadp {
-  .row.row-eq-height {
-    display: flex;
-    margin-bottom: 20px;
-    .col-md3, .col-sm-6 {
-      //flex: 1;
-      .thumbnail.acadp-entry {
-        height: 100%;
+@media all and (min-width: 992px) { // only equal hieght at desktop
+  .acadp {
+    .row.row-eq-height {
+      display: flex;
+      margin-bottom: 20px;
+      .col-md3, .col-sm-6 {
+        //flex: 1;
+        .thumbnail.acadp-entry {
+          height: 100%;
+        }
       }
     }
   }
