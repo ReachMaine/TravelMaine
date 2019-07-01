@@ -121,6 +121,19 @@ ul.travelme-town-list {
   ul.travelme-town-list li a {
     color: #000; }
 
+ul.travelme-flex-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  ul.travelme-flex-list li {
+    text-align: center;
+    flex-grow: 1; }
+
+.travelme-link-green a, a.travelme-link-green {
+  color: #13ca91; }
+
 /* custom styling for acadp */
 @media all and (min-width: 992px) {
   .acadp .row.row-eq-height {

@@ -151,3 +151,18 @@ ul.travelme-town-list {
 		}
 	}
 }
+
+ul.travelme-flex-list {
+	list-style:none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	li {
+		text-align: center;
+		flex-grow: 1;
+	}
+}
+.travelme-link-green a, a.travelme-link-green {
+		color: $travelme-green;
+}
