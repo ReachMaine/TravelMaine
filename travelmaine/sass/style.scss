@@ -14,10 +14,23 @@
 @import "partials/tribe_events";
 @import "partials/gform";
 
-//body.home {
-  #main-header {
+  #main-header { // make header transparent s.t. home page can slide under
     background-color: rgba(255, 255, 255, 0.43137254901960786);
   }
 
-//}
+#top-menu-nav {
+  ul#top-menu {
+    ul.sub-menu { // flyout menu styling.
+      li {
+        padding: 8px 0px;
+        line-height: 1.5em;
+        a {
+          font-size: 14px;
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+}
+
 @import "partials/media"; // keep at bottom;

@@ -277,6 +277,13 @@ ul.ecs-event-list li.ecs-event:not(:last-child) {
 #main-header {
   background-color: rgba(255, 255, 255, 0.431372549); }
 
+#top-menu-nav ul#top-menu ul.sub-menu li {
+  padding: 8px 0px;
+  line-height: 1.5em; }
+  #top-menu-nav ul#top-menu ul.sub-menu li a {
+    font-size: 14px;
+    letter-spacing: normal; }
+
 /* **** media **** */
 @media all and (min-width: 981px) {
   body.home #et-main-area #main-content article {
