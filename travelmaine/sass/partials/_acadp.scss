@@ -1,4 +1,6 @@
 /* custom styling for acadp */
+// both single & grid view
+
 
 // listings - grid view+
 @media all and (min-width: 992px) { // only equal hieght at desktop
@@ -10,8 +12,18 @@
         //flex: 1;
         .thumbnail.acadp-entry {
           height: 100%;
+
         }
       }
+    }
+  }
+}
+@media all and (max-width: 991px) {
+  .acadp {
+    .row.row-eq-height {
+        .thumbnail.acadp-entry {
+          margin-bottom: 20px;
+        }
     }
   }
 }
@@ -20,6 +32,7 @@
         background-color: white;
         padding: 0px 0px 0px 0px;
         border: 0px;
+        margin-bottom: 0px;
         .acadp-listing-image {
           width: 100%;
           //border-bottom: 1px solid $travelme-divider;
@@ -52,6 +65,12 @@
             display: inline-block;
             //padding-left: 3px; // space for gliphicon
           }
+          .acadp-mapit {
+            img {
+              background-color: $travelme-green;
+              margin: 0px;
+            }
+          }
         }
 
     .acadp-listing-catline {
@@ -61,27 +80,7 @@
 
 }
 
-// listings = home view
-.acadp.acadp-listings.acadp-home-view {
-  /* .acadp-entry {
-      background-color: white;
-      padding: 0px 0px 0px 0px;
-      border: 0px;
-      .acadp-listing-image {
-        width: 100%;
-        border-bottom: 1px solid $travelme-divider;
-      }
-      .acadp-listings-title-block {
-        padding-top: 10px;
-        border-bottom: 0px;
-      }
-      .acadp-listings-title-block,
-      .acadp-listing-contactinfo {
-        padding-left: 6px;
-        padding-right: 6px;
-      }
-  } */
-}
+
 // single
 .single.single-acadp_listings  {
 

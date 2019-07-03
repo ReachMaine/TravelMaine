@@ -91,6 +91,7 @@
 													echo '<div class="acadp-responsive-container"></div>';
 												}?>
 											</div>
+											<div class="acadp-listing-desc-wrap">
 											<div class="acadp-listings-title-block">
 
 												<?php /* show category icon */
@@ -117,12 +118,16 @@
 
 												if (array_key_exists("address",$post_meta) ) {
 													if ($post_meta["address"][0]) {
+														$gmap_link = preg_replace('/\s/', '+', $post_meta["address"][0]);
+														$gmap_link = "https://www.google.com/maps/place/".$gmap_link;
 														$contact_info .= '<div class="acadp-listing-addr">';
-														$contact_info .=  '<span class="glyphicon glyphicon-map-marker"></span>';
+														$contact_info .= '<a target="_blank" href="'.$gmap_link.'"><span class="glyphicon glyphicon-map-marker"></span></a>';
 														$contact_info .= $post_meta["address"][0];
 														$contact_info .= '</div>';
-														$gmap_link = "";
-														$contact_info .= '<a href="'.$map_link.'">mapit</a>';
+
+														//$contact_info .= '<div class="acadp-mapit">';
+														//$contact_info .= ' <a target="_blank" href="'.$gmap_link.'"><img src="'.get_stylesheet_directory_uri().'/images/directions.png" ></a>';
+														//$contact_info .= '</div>';
 													}
 												}
 												if (array_key_exists("phone",$post_meta) ) {
@@ -176,8 +181,9 @@
                             ?>
 
                             <?php do_action( 'acadp_after_listing_content', $post->ID, 'grid' ); ?>
-                        </div>
-                    </div>
+                        </div> <!-- catline -->
+											</div> <!-- desc-wrap -->
+                    </div> <!-- thumbnail -->
                 </div>
 
             <?php

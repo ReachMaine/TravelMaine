@@ -134,6 +134,12 @@ ul.travelme-flex-list {
 .travelme-link-green a, a.travelme-link-green {
   color: #13ca91; }
 
+.travelme-more-button {
+  background-color: #13ca91;
+  padding: 6px 14px;
+  text-transform: uppercase;
+  color: white; }
+
 /* custom styling for acadp */
 @media all and (min-width: 992px) {
   .acadp .row.row-eq-height {
@@ -141,10 +147,14 @@ ul.travelme-flex-list {
     margin-bottom: 20px; }
     .acadp .row.row-eq-height .col-md3 .thumbnail.acadp-entry, .acadp .row.row-eq-height .col-sm-6 .thumbnail.acadp-entry {
       height: 100%; } }
+@media all and (max-width: 991px) {
+  .acadp .row.row-eq-height .thumbnail.acadp-entry {
+    margin-bottom: 20px; } }
 .acadp .thumbnail.acadp-entry {
   background-color: white;
   padding: 0px 0px 0px 0px;
-  border: 0px; }
+  border: 0px;
+  margin-bottom: 0px; }
   .acadp .thumbnail.acadp-entry .acadp-listing-image {
     width: 100%; }
     .acadp .thumbnail.acadp-entry .acadp-listing-image .acadp-responsive-container {
@@ -167,28 +177,11 @@ ul.travelme-flex-list {
       padding-right: 3px; }
     .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo .acadp-listing-phone {
       display: inline-block; }
+    .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo .acadp-mapit img {
+      background-color: #13ca91;
+      margin: 0px; }
   .acadp .thumbnail.acadp-entry .acadp-listing-catline {
     clear: both; }
-
-.acadp.acadp-listings.acadp-home-view {
-  /* .acadp-entry {
-      background-color: white;
-      padding: 0px 0px 0px 0px;
-      border: 0px;
-      .acadp-listing-image {
-        width: 100%;
-        border-bottom: 1px solid $travelme-divider;
-      }
-      .acadp-listings-title-block {
-        padding-top: 10px;
-        border-bottom: 0px;
-      }
-      .acadp-listings-title-block,
-      .acadp-listing-contactinfo {
-        padding-left: 6px;
-        padding-right: 6px;
-      }
-  } */ }
 
 /* styling for tribe events & events calendar shortcode */
 ul.ecs-event-list li.ecs-event {

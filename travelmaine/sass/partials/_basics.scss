@@ -166,3 +166,10 @@ ul.travelme-flex-list {
 .travelme-link-green a, a.travelme-link-green {
 		color: $travelme-green;
 }
+
+.travelme-more-button {
+	background-color: $travelme-green;
+	padding: 6px 14px;
+	text-transform: uppercase;
+	color: white;
+}
