@@ -35,19 +35,23 @@
         margin-bottom: 0px;
         .acadp-listing-image {
           width: 100%;
-          //border-bottom: 1px solid $travelme-divider;
           .acadp-responsive-container {
             background-color: transparent;
+            img {
+              max-width: 90%;
+            }
           }
         }
         .acadp-listings-title-block {
-          border-bottom: 1px solid $travelme-divider;
+
           padding-top: 10px;
-          border-bottom: 0px;
+          text-align: center;
+          margin-bottom: 5px; //
           .acadp-listing-subtitle {
             clear: both;
             font-style: italic;
             padding-left: 4px;
+            font-weight:normal;
             //text-align: center;
           }
         }

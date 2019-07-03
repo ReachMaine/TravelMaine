@@ -80,6 +80,26 @@
 
                 <div class="<?php echo $span; ?>">
                     <div <?php the_acadp_listing_entry_class( $post_meta, 'thumbnail' ); ?>>
+											<div class="acadp-listings-title-block">
+
+												<?php /* show category icon */
+
+												$cat_glyph = '<span class="glyphicon glyphicon-briefcase"></span>';
+												$cat_glyph = rmm_get_category_icon( $post->ID);
+												?>
+													<h4 class="acadp-no-margin"><?php/* echo '<small>'.$cat_glyph.'</small>';*/?><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+													<?php
+														//echo "<pre>"; var_dump($post_meta); echo "</pre>";
+														 $custom_field = "216";// custom field subtitle, id=216
+														if (array_key_exists($custom_field,$post_meta) ) {
+															echo '<div class="acadp-listing-subtitle">' ;
+															echo $post_meta[$custom_field][0];
+															echo "</div>";
+														}
+													?>
+													<?php the_acadp_listing_labels( $post_meta ); ?>
+											</div><!-- title block -->
 											<div class="acadp-listing-image">
 												<?php
 													$hasthumb = "";
@@ -92,26 +112,7 @@
 												}?>
 											</div>
 											<div class="acadp-listing-desc-wrap">
-											<div class="acadp-listings-title-block">
 
-												<?php /* show category icon */
-
-												$cat_glyph = '<span class="glyphicon glyphicon-briefcase"></span>';
-												$cat_glyph = rmm_get_category_icon( $post->ID);
-												?>
-													<h4 class="acadp-no-margin"><?php echo '<small>'.$cat_glyph.'</small>';?>&nbsp;<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-
-													<?php
-														//echo "<pre>"; var_dump($post_meta); echo "</pre>";
-														 $custom_field = "216";// custom field subtitle, id=216
-														if (array_key_exists($custom_field,$post_meta) ) {
-															echo '<div class="acadp-listing-subtitle">' ;
-															echo $post_meta[$custom_field][0];
-															echo "</div>";
-														}
-													?>
-													<?php the_acadp_listing_labels( $post_meta ); ?>
-											</div>
 
 											<?php /* contact info - address, phone website */
 												$contact_info = "";
