@@ -9,48 +9,46 @@
 
 	<div class="row">
         <!-- Main content -->
-				 <!-- Image(s) -->
-			<?php
-				if( $can_show_images ) { ?>
-					<div class="col-md-3"> <?php
-							$images = unserialize( $post_meta['images'][0] );
-							$image_attributes = wp_get_attachment_image_src( $images[0], 'large' ); ?>
-							<p><img src="<?php echo $image_attributes[0]; ?>" /></p>
-					</div>
-				<?php } /* end images */ ?>
+				<!-- Title & subtitle -->
+				<div class="col-md-12">
+					<div class="acadp-post-title">
+							<h1 class="acadp-no-margin"><?php echo $post->post_title; ?></h1>
+							<?php
+								//echo "<pre>"; var_dump($post_meta); echo "</pre>";
+								 $custom_field = "216";// custom field subtitle, id=216
+								if (array_key_exists($custom_field,$post_meta) ) {
+									echo '<div class="acadp-listing-subtitle">' ;
+									echo $post_meta[$custom_field][0];
+									echo "</div>";
+								}
+							?>
+							<?php the_acadp_listing_labels( $post_meta );
+									$usermeta = array();
 
-					<!-- Title & location -->
-        <div class="<?php echo $can_show_images ? 'col-md-3' : 'col-md-6'; ?>">
-
-            <div class="acadp-post-title">
-                <h1 class="acadp-no-margin"><?php echo $post->post_title; ?></h1>
-								<?php
-									//echo "<pre>"; var_dump($post_meta); echo "</pre>";
-									 $custom_field = "216";// custom field subtitle, id=216
-									if (array_key_exists($custom_field,$post_meta) ) {
-										echo '<div class="acadp-listing-subtitle">' ;
-										echo $post_meta[$custom_field][0];
-										echo "</div>";
+									if( $can_show_date ) {
+											$usermeta[] = sprintf( __( 'Posted %s ago', 'advanced-classifieds-and-directory-pro' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) );
 									}
-								?>
-                <?php the_acadp_listing_labels( $post_meta );
-                    $usermeta = array();
 
-                    if( $can_show_date ) {
-                        $usermeta[] = sprintf( __( 'Posted %s ago', 'advanced-classifieds-and-directory-pro' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) );
-                    }
+									if( $can_show_user ) {
+											$usermeta[] = '<a href="'.acadp_get_user_page_link( $post->post_author ).'">'.get_the_author().'</a>';
+									}
+						?>
+						<?php if( $can_show_category ) {
+								echo sprintf( rmm_get_category_icon( $post->ID).'&nbsp;<a href="%s">%s</a>', acadp_get_category_page_link( $category ), $category->name );
+						} ?>
+					</div> <!-- end post title -->
+				</div>
 
-                    if( $can_show_user ) {
-                        $usermeta[] = '<a href="'.acadp_get_user_page_link( $post->post_author ).'">'.get_the_author().'</a>';
-                    }
-							?> </div> <!-- end post title -->
+        <div class="<?php echo $can_show_images ? 'col-md-4' : 'col-md-8'; ?>">
+
+
 							<!-- post-meta -->
 							<div class="acadp-post-meta"> <?php
                     $meta = array();
 
-                    if( $can_show_category ) {
+                    /* if( $can_show_category ) {
 												$meta[] = sprintf( rmm_get_category_icon( $post->ID).'&nbsp;<a href="%s">%s</a>', acadp_get_category_page_link( $category ), $category->name );
-                    }
+                    } */
 
                     if( count( $usermeta ) ) {
                         $meta[] = implode( ' '.__( 'by', 'advanced-classifieds-and-directory-pro' ).' ', $usermeta );
@@ -70,6 +68,7 @@
 
                 ?>
             </div> <!-- post meta -->
+
 						<?php /* <!-- Address --> */
 						 if( $has_location ) {
 							 echo '<div class="acadp-post-location">';
@@ -87,8 +86,15 @@
                 </div>
             <?php endif; ?>
 					</div> <!-- end col 9/12 -->
+					<?php if( $can_show_images ) { ?>
+						<div class="col-md-4"> <?php
+								$images = unserialize( $post_meta['images'][0] );
+								$image_attributes = wp_get_attachment_image_src( $images[0], 'large' ); ?>
+								<div class="acadp-logo-image"><img src="<?php echo $image_attributes[0]; ?>" /></div>
+						</div>
+					<?php } /* end images */ ?>
 					<!-- map -->
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<?php if( $can_show_map && ($post_meta['address'][0] != "") ) :
 									 //echo '<p> lat is:{'.$post_meta['latitude'][0].'} and lon is: {'.$post_meta['longitude'][0].'}</p>';
 									 //echo '<p>address is:{'.$post_meta['address'][0].'}</p>';
@@ -99,14 +105,26 @@
 													<div class="marker" data-latitude="<?php echo $post_meta['latitude'][0]; ?>" data-longitude="<?php echo $post_meta['longitude'][0]; ?>"></div>
 											</div>
 									</div>
+									<div class="acadp-mapdir">
+											<?php
+											$gmap_addstr  = preg_replace('/\s/', '+', $post_meta["address"][0]);
+											$gmap_link = "https://www.google.com/maps/dir//".$gmap_addstr;
+											?>
+											<a href="<?php echo $gmap_link;?>" target="blank">
+												Get Directions
+												<img src="<?php echo get_stylesheet_directory_uri();?>/images/directions.png">
+											</a>
+									</div>
 							<?php endif; ?>
 					</div>
           <div class="clearfix"></div>
 
 
             <!-- Description -->
-						<div class="col-md-9">
-	            <?php echo $description; ?>
+						<div class="col-md-12">
+							<div class="acadp-desc">
+		            <?php echo $description; ?>
+							</div>
 						</div>
 
             <!-- Custom fields -->

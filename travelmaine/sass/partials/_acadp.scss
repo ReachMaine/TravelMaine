@@ -31,7 +31,7 @@
   .thumbnail.acadp-entry { // listing in grid view
         background-color: white;
         padding: 0px 0px 0px 0px;
-        border: 0px;
+        border: 1px solid $travelme-divider;
         margin-bottom: 0px;
         .acadp-listing-image {
           width: 100%;
@@ -87,5 +87,20 @@
 
 // single
 .single.single-acadp_listings  {
-
+  .acadp-logo-image {
+    img {
+      max-height: 300px;
+      padding-bottom: 10px;
+    }
+  }
+  .acadp-mapdir {
+    text-align: right;
+    a img { // get directions icon
+      background-color: $travelme-green;
+      padding: 1px;
+    }
+  }
+  .acadp-desc {
+    padding-top: 10px;
+  }
 }

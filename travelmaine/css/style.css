@@ -153,7 +153,7 @@ ul.travelme-flex-list {
 .acadp .thumbnail.acadp-entry {
   background-color: white;
   padding: 0px 0px 0px 0px;
-  border: 0px;
+  border: 1px solid #ddd;
   margin-bottom: 0px; }
   .acadp .thumbnail.acadp-entry .acadp-listing-image {
     width: 100%; }
@@ -185,6 +185,17 @@ ul.travelme-flex-list {
       margin: 0px; }
   .acadp .thumbnail.acadp-entry .acadp-listing-catline {
     clear: both; }
+
+.single.single-acadp_listings .acadp-logo-image img {
+  max-height: 300px;
+  padding-bottom: 10px; }
+.single.single-acadp_listings .acadp-mapdir {
+  text-align: right; }
+  .single.single-acadp_listings .acadp-mapdir a img {
+    background-color: #13ca91;
+    padding: 1px; }
+.single.single-acadp_listings .acadp-desc {
+  padding-top: 10px; }
 
 /* styling for tribe events & events calendar shortcode */
 ul.ecs-event-list li.ecs-event {
