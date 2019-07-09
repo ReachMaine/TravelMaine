@@ -38,6 +38,8 @@ a.travelme-link-alt {
     padding: 10px 10px 10px 20px;
     font-size: 15px;
     text-transform: uppercase; }
+  .rmm-vertical-tabs ul.et_pb_tabs_controls li.et_pb_tab_active a {
+    color: white !important; }
 .rmm-vertical-tabs ul.et_pb_tabs_controls:after {
   content: none;
   border-top: 0px; }
@@ -284,6 +286,9 @@ ul.ecs-event-list li.ecs-event:not(:last-child) {
 #main-header {
   background-color: rgba(255, 255, 255, 0.431372549); }
 
+body.home #top-menu li.current-menu-item > a {
+  color: white !important; }
+
 #top-menu-nav ul#top-menu ul.sub-menu li {
   padding: 8px 0px;
   line-height: 1.5em; }
@@ -291,12 +296,17 @@ ul.ecs-event-list li.ecs-event:not(:last-child) {
     font-size: 14px;
     letter-spacing: normal; }
 
-.travelme-header-nav {
-  background-color: #e8fbf9;
-  text-align: center;
-  padding-top: 12px; }
-
 /* **** media **** */
 @media all and (min-width: 981px) {
+  .travelme-header-nav {
+    background-color: #e8fbf9;
+    text-align: center;
+    padding-top: 12px; }
+
+  body.home .travelme-header-nav {
+    background-color: transparent; }
   body.home #et-main-area #main-content article {
-    margin-top: -112.5px; } }
+    margin-top: -124.5px; } }
+@media all and (max-width: 980px) {
+  .et_mobile_nav_menu {
+    margin: 20px 20px 20px 0; } }

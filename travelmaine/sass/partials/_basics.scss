@@ -33,6 +33,9 @@ a.travelme-link-alt {
 					 text-transform: uppercase;
 				 }
 			 }
+			 li.et_pb_tab_active a {
+				 color: white!important;
+			 }
 		}
   ul.et_pb_tabs_controls:after {
 			content: none;

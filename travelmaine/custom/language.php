@@ -15,9 +15,9 @@
 				            	break;
 				        }
 						break; */
-						case 'oshin': {
+						case 'Divi': {
 							switch ( $translated_text ) {
-									 case 'Category: ' : // remove Category: from front of blog archives.
+									 case 'Select Page' :  // remove Select Page from mobile menu
 											 $translated_text =  '';
 											 break;
 							 }

@@ -17,7 +17,9 @@
   #main-header { // make header transparent s.t. home page can slide under
     background-color: rgba(255, 255, 255, 0.43137254901960786);
   }
-
+body.home #top-menu li.current-menu-item>a {  // active link on home page
+  color: white!important
+}
 #top-menu-nav {
   ul#top-menu {
     ul.sub-menu { // flyout menu styling.
@@ -32,10 +34,6 @@
     }
   }
 }
-.travelme-header-nav {
-  background-color: $travelme-ltgreen;
-  text-align: center;
-  padding-top: 12px;
-}
+
 
 @import "partials/media"; // keep at bottom;

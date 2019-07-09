@@ -4,19 +4,31 @@
 
 
 @media all and (min-width: 981px) { // no  hamberger menu
-  body.home {
+  .travelme-header-nav {
+    background-color: $travelme-ltgreen;
+    text-align: center;
+    padding-top: 12px;
+  }
 
+  body.home {
+    .travelme-header-nav {
+      background-color: transparent; // header transparent on homepage.
+    }
     #et-main-area {
       #main-content {
         article {
-          margin-top: -112.5px;
+          margin-top: -124.5px; //-112.5px;
         }
       }
     }
 
   }
+
 }
-@media all and (max-width: 980px) { // woo stuff & hamberger menu
+@media all and (max-width: 980px) { //  hamberger menu showing
+  .et_mobile_nav_menu {
+    margin: 20px 20px 20px 0;
+  }
 }
 @media only screen and (max-width: 960px) {
 
