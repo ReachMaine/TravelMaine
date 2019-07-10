@@ -283,6 +283,10 @@ ul.ecs-event-list li.ecs-event:not(:last-child) {
 .gform_wrapper .gform_footer input.button:hover {
   border: 2px solid transparent; }
 
+/* styling for divi overlays */
+.overlay-container p {
+  line-height: 1.5em; }
+
 #main-header {
   background-color: rgba(255, 255, 255, 0.431372549); }
 
