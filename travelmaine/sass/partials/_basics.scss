@@ -151,7 +151,12 @@ ul.travelme-town-list {
 	li {
 		a {
 			color: $travelme-link-alt;
+			.travelme-townname {
+				text-align: center;
+				max-width: 150px;
+			}
 		}
+
 	}
 }
 
