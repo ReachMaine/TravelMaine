@@ -328,6 +328,25 @@ body.home #top-menu li.current-menu-item > a {
     font-size: 14px;
     letter-spacing: normal; }
 
+.textwidget .request_guide_wrap {
+  border-radius: 6px 6px 6px 6px;
+  overflow: hidden;
+  border: 3px solid #13ca91;
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3); }
+  .textwidget .request_guide_wrap .request_guide_inner {
+    border-width: 5px;
+    border-color: transparent;
+    padding-top: 30px !important;
+    padding-right: 15px !important;
+    padding-bottom: 18px !important;
+    padding-left: 15px !important; }
+    .textwidget .request_guide_wrap .request_guide_inner h4 {
+      color: #13ca91;
+      font-size: 1.3em;
+      line-height: 1.3em;
+      text-align: center;
+      font-weight: bold; }
+
 /* **** media **** */
 @media all and (min-width: 981px) {
   .travelme-header-nav {
