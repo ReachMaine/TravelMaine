@@ -31,10 +31,10 @@ get_header();
 				</article> <!-- .et_pb_post -->
 
 			<?php endwhile; ?>
-
-			</div> <!-- #left-area -->
-
 			<?php get_sidebar(); ?>
+			</div> 
+
+
 		</div> <!-- #content-area -->
 	</div> <!-- .container -->
 
