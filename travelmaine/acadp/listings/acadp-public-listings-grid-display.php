@@ -93,9 +93,11 @@
 														//echo "<pre>"; var_dump($post_meta); echo "</pre>";
 														 $custom_field = "216";// custom field subtitle, id=216
 														if (array_key_exists($custom_field,$post_meta) ) {
-															echo '<div class="acadp-listing-subtitle">' ;
-															echo $post_meta[$custom_field][0];
-															echo "</div>";
+															if ($post_meta[$custom_field][0] != '') {
+																echo '<div class="acadp-listing-subtitle">' ;
+																echo $post_meta[$custom_field][0];
+																echo "</div>";
+															}
 														}
 													?>
 													<?php the_acadp_listing_labels( $post_meta ); ?>
@@ -122,8 +124,8 @@
 														$gmap_link = preg_replace('/\s/', '+', $post_meta["address"][0]);
 														$gmap_link = "https://www.google.com/maps/place/".$gmap_link;
 														$contact_info .= '<div class="acadp-listing-addr">';
-														$contact_info .= '<a target="_blank" href="'.$gmap_link.'"><span class="glyphicon glyphicon-map-marker"></span></a>';
 														$contact_info .= $post_meta["address"][0];
+														$contact_info .= '<a target="_blank" href="'.$gmap_link.'"> <i class="fas fa-directions"></i></a>';
 														$contact_info .= '</div>';
 
 														//$contact_info .= '<div class="acadp-mapit">';
@@ -134,8 +136,11 @@
 												if (array_key_exists("phone",$post_meta) ) {
 												 if ($post_meta["phone"][0]){
 													 	$contact_info .= '<div class="acadp-listing-phone">';
-													  $contact_info .= '<span class="glyphicon glyphicon-earphone"></span>';
+
+													  //$contact_info .= '<span class="glyphicon glyphicon-earphone"></span>';
 														$contact_info .= format_phone($post_meta["phone"][0]);
+														//$contact_info .= '<a target="_blank" href="tel:'.$post_meta["phone"][0].'"> <i class="fas fa-phone-alt"></i></a>';
+														$contact_info .= ' <a target="_blank" href="tel:'.$post_meta["phone"][0].'"><i class="fas fa-mobile-alt"></i></a>';
 														$contact_info .= '</div>';
 													}
 												}
@@ -143,8 +148,9 @@
 													if ($post_meta["website"][0]) {
 														//$contact_info .= '<div class="acadp-listing-url">'.$post_meta["website"][0].'</div>';
 														$contact_info .= '<div class="acadp-listing-url">';
-													  $contact_info .= '<span class="glyphicon glyphicon-globe"></span>';
-														$contact_info .= '<a target="_blank" href="'.$post_meta["website"][0].'">website</a>';
+													  //$contact_info .= '<span class="glyphicon glyphicon-globe"></span>';
+														//$contact_info .= '<i class="fas fa-external-link-alt"></i>';
+														$contact_info .= '<a target="_blank" href="'.$post_meta["website"][0].'">website <i class="fas fa-external-link-alt"></i></a>';
 														$contact_info .= '</div>';
 													}
 												}
@@ -152,7 +158,7 @@
 												echo $contact_info;
 												echo '</div>';
 											?>
-                        <div class="caption acadp-listing-catline">
+                        <div class=" acadp-listing-catline">
                             <?php
 																/* bottom line with category & location */
                                 $info = array();
@@ -183,6 +189,17 @@
 
                             <?php do_action( 'acadp_after_listing_content', $post->ID, 'grid' ); ?>
                         </div> <!-- catline -->
+												<?php /* show if pet-friendly */
+													//echo "<pre>"; var_dump($post_meta); echo "</pre>";
+													$custom_field = "29";// custom field pet-friendly, id=29
+													if (array_key_exists($custom_field,$post_meta) ) {
+														if ($post_meta[$custom_field][0] == 'yes') {
+															echo '<div class="acadp-listing-pets small">' ;
+															echo '<p><i class="fa fa-paw"></i> Pet Friendly</p>';
+															echo "</div>";
+														}
+													}
+												?>
 											</div> <!-- desc-wrap -->
                     </div> <!-- thumbnail -->
                 </div>

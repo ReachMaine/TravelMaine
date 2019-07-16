@@ -147,7 +147,7 @@ ul.travelme-town-list {
 	list-style: none;
 	display: inline-flex;
 	flex-wrap: wrap;
-
+  padding-left: 0px;
 	li {
 		a {
 			color: $travelme-link-alt;

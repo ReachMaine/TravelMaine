@@ -30,7 +30,7 @@
 .acadp {
   .thumbnail.acadp-entry { // listing in grid view
         background-color: white;
-        padding: 0px 0px 0px 0px;
+        padding: 10px 8px 4px 8px;
         border: 1px solid $travelme-divider;
         margin-bottom: 0px;
         .acadp-listing-image {
@@ -57,8 +57,8 @@
         }
         .acadp-listings-title-block,
         .acadp-listing-contactinfo {
-          padding-left: 6px;
-          padding-right: 6px;
+          //padding-left: 6px;
+          //padding-right: 6px;
         }
         .acadp-listing-contactinfo {
           padding-top: 10px;

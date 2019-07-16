@@ -39,24 +39,28 @@ function format_phone($in_phone_text) {
 }
 
 function rmm_get_category_icon ($in_postid) {
-  $out_str = '<span class="glyphicon glyphicon-briefcase"></span>';
+  $out_str = '<span class="glyphicon glyphicon-briefcase"></span>'; // default
   $category = wp_get_object_terms( $in_postid, 'acadp_categories' );
   if ( $category ) {
       switch ($category[0]->slug) {
         case 'dine':
           $out_str = '<span class="glyphicon glyphicon-cutlery"></span>';
+          $out_str = '<i class="fas fa-utensils"></i>';
           break;
         case 'shop':
           $out_str = '<span class="glyphicon glyphicon-gift"></span>';
+          $out_str = '<i class="fas fa-shopping-basket"></i>';
           break;
         case 'play':
           $out_str = '<span class="glyphicon glyphicon-sunglasses"></span>';
           break;
         case 'stay':
           $out_str = '<span class="glyphicon glyphicon-bed"></span>';
+          $out_str ='<i class="fas fa-bed"></i>';
           break;
         case 'pets':
           $out_str = '<span class="glyphicon glyphicon-check"></span>';
+          $out_str = '<i class="fas fa-paw"></i>';
           break;
       }
   }

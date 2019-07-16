@@ -85,6 +85,17 @@
                     ?>
                 </div>
             <?php endif; ?>
+						<?php /* show if pet-friendly */
+							//echo "<pre>"; var_dump($post_meta); echo "</pre>";
+							$custom_field = "29";// custom field subtitle, id=216
+							if (array_key_exists($custom_field,$post_meta) ) {
+								if ($post_meta[$custom_field][0] == 'yes') {
+									echo '<div class="acadp-listing-pets">' ;
+									echo '<i class="fa fa-paw"></i> Pet Friendly';
+									echo "</div>";
+								}
+							}
+						?>
 					</div> <!-- end col 9/12 -->
 					<?php if( $can_show_images ) { ?>
 						<div class="col-md-4"> <?php
