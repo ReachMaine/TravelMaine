@@ -160,7 +160,10 @@ ul.travelme-flex-list {
   background-color: white;
   padding: 10px 8px 4px 8px;
   border: 1px solid #ddd;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  text-align: center; }
+  .acadp .thumbnail.acadp-entry a {
+    color: #13ca91; }
   .acadp .thumbnail.acadp-entry .acadp-listing-image {
     width: 100%; }
     .acadp .thumbnail.acadp-entry .acadp-listing-image .acadp-responsive-container {

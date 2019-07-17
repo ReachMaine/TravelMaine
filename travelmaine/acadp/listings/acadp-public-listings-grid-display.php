@@ -110,7 +110,7 @@
 														<a href="<?php the_permalink(); ?>" class="acadp-responsive-container"><?php the_acadp_listing_thumbnail( $post_meta ); ?></a>
 
 												<?php }  else {
-													echo '<div class="acadp-responsive-container"></div>';
+													//echo '<div class="acadp-responsive-container"></div>';
 												}?>
 											</div>
 											<div class="acadp-listing-desc-wrap">
