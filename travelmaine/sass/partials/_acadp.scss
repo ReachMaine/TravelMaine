@@ -31,59 +31,78 @@
 .acadp {
   .thumbnail.acadp-entry { // listing in grid view
         background-color: white;
-        padding: 10px 8px 4px 8px;
+        //padding: 10px 8px 4px 8px;
+        //padding: 10px;
         border: 1px solid $travelme-divider;
         margin-bottom: 0px;
-        text-align: center;
-        a {
-          color: $travelme-green;
-        }
-        .acadp-listing-image {
-          width: 100%;
-          .acadp-responsive-container {
-            background-color: transparent;
-            img {
-              max-width: 90%;
+        //text-align: center;
+
+        .acadp-listings-title-block {
+          padding-top: 16px;
+          background-color: $travelme-ltgreen;
+          padding-bottom: 10px;
+          text-align: center;
+          //margin-bottom: 5px; //
+          h4 {
+            font-weight: bold;
+            padding-bottom: 0px;
+            a {
+              color: $travelme-dkgrey;
             }
           }
-        }
-        .acadp-listings-title-block {
-
-          padding-top: 10px;
-          text-align: center;
-          margin-bottom: 5px; //
           .acadp-listing-subtitle {
             clear: both;
             font-style: italic;
-            padding-left: 4px;
-            font-weight:normal;
+            //padding-left: 4px;
+            font-weight: normal;
             //text-align: center;
           }
         }
-        .acadp-listings-title-block,
-        .acadp-listing-contactinfo {
-          //padding-left: 6px;
-          //padding-right: 6px;
-        }
-        .acadp-listing-contactinfo {
+        .acadp-listing-desc-wrap {
+          a {
+            color: $travelme-green;
+          }
+          padding-left: 16px;
+          padding-right: 16px;
           padding-top: 10px;
-          .glyphicon {
-            padding-right: 3px;
-          }
-          .acadp-listing-phone {
-            display: inline-block;
-            //padding-left: 3px; // space for gliphicon
-          }
-          .acadp-mapit {
-            img {
-              background-color: $travelme-green;
-              margin: 0px;
+            .acadp-listing-image {
+              display: inline-block;
+              float:left;
+              width: 40%;
+              max-width:300px;
+              .acadp-responsive-containerX {
+                background-color: transparent;
+                img {
+                  max-height: 180px;
+                }
+              }
             }
-          }
-        }
+
+            .acadp-listing-contactinfo.hasthumb { // if there is an image.
+              width: 60%;
+              display: inline-block;
+              float: left;
+            }
+
+            .acadp-listing-contactinfo {
+              //padding-top: 10px;
+              text-align: left;
+              padding-left: 16px;
+              .glyphicon {
+                padding-right: 3px;
+              }
+              .acadp-listing-phone {
+                display: inline-block;
+                //padding-left: 3px; // space for gliphicon
+              }
+            }
+          } // desc-wrap
 
     .acadp-listing-catline {
       clear: both;
+      width: 100%;
+      text-align: center;
+      padding-top: 10px;
     }
   }
 
@@ -92,6 +111,11 @@
 
 // single
 .single.single-acadp_listings  {
+  .acadp.acadp-listing {
+    a {
+      color: $travelme-green;
+    }
+  }
   .acadp-logo-image {
     img {
       max-height: 300px;

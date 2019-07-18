@@ -158,39 +158,56 @@ ul.travelme-flex-list {
     margin-bottom: 20px; } }
 .acadp .thumbnail.acadp-entry {
   background-color: white;
-  padding: 10px 8px 4px 8px;
   border: 1px solid #ddd;
-  margin-bottom: 0px;
-  text-align: center; }
-  .acadp .thumbnail.acadp-entry a {
-    color: #13ca91; }
-  .acadp .thumbnail.acadp-entry .acadp-listing-image {
-    width: 100%; }
-    .acadp .thumbnail.acadp-entry .acadp-listing-image .acadp-responsive-container {
-      background-color: transparent; }
-      .acadp .thumbnail.acadp-entry .acadp-listing-image .acadp-responsive-container img {
-        max-width: 90%; }
+  margin-bottom: 0px; }
   .acadp .thumbnail.acadp-entry .acadp-listings-title-block {
-    padding-top: 10px;
-    text-align: center;
-    margin-bottom: 5px; }
+    padding-top: 16px;
+    background-color: #e8fbf9;
+    padding-bottom: 10px;
+    text-align: center; }
+    .acadp .thumbnail.acadp-entry .acadp-listings-title-block h4 {
+      font-weight: bold;
+      padding-bottom: 0px; }
+      .acadp .thumbnail.acadp-entry .acadp-listings-title-block h4 a {
+        color: #4e4e50; }
     .acadp .thumbnail.acadp-entry .acadp-listings-title-block .acadp-listing-subtitle {
       clear: both;
       font-style: italic;
-      padding-left: 4px;
       font-weight: normal; }
-  .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo {
+  .acadp .thumbnail.acadp-entry .acadp-listing-desc-wrap {
+    padding-left: 16px;
+    padding-right: 16px;
     padding-top: 10px; }
-    .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo .glyphicon {
-      padding-right: 3px; }
-    .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo .acadp-listing-phone {
-      display: inline-block; }
-    .acadp .thumbnail.acadp-entry .acadp-listing-contactinfo .acadp-mapit img {
-      background-color: #13ca91;
-      margin: 0px; }
+    .acadp .thumbnail.acadp-entry .acadp-listing-desc-wrap a {
+      color: #13ca91; }
+    .acadp .thumbnail.acadp-entry .acadp-listing-desc-wrap .acadp-listing-image {
+      display: inline-block;
+      float: left;
+      width: 40%;
+      max-width: 300px; }
+      .acadp .thumbnail.acadp-entry .acadp-listing-desc-wrap .acadp-listing-image .acadp-responsive-containerX {
+        background-color: transparent; }
+        .acadp .thumbnail.acadp-entry .acadp-listing-desc-wrap .acadp-listing-image .acadp-responsive-containerX img {
+          max-height: 180px; }
+    .acadp .thumbnail.acadp-entry .acadp-listing-desc-wrap .acadp-listing-contactinfo.hasthumb {
+      width: 60%;
+      display: inline-block;
+      float: left; }
+    .acadp .thumbnail.acadp-entry .acadp-listing-desc-wrap .acadp-listing-contactinfo {
+      text-align: left;
+      padding-left: 16px; }
+      .acadp .thumbnail.acadp-entry .acadp-listing-desc-wrap .acadp-listing-contactinfo .glyphicon {
+        padding-right: 3px; }
+      .acadp .thumbnail.acadp-entry .acadp-listing-desc-wrap .acadp-listing-contactinfo .acadp-listing-phone {
+        display: inline-block; }
   .acadp .thumbnail.acadp-entry .acadp-listing-catline {
-    clear: both; }
+    clear: both;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px; }
 
+.single.single-acadp_listings .acadp.acadp-listing a {
+  color: #13ca91; }
 .single.single-acadp_listings .acadp-logo-image img {
   max-height: 300px;
   padding-bottom: 10px; }

@@ -80,13 +80,10 @@
 
                 <div class="<?php echo $span; ?>">
                     <div <?php the_acadp_listing_entry_class( $post_meta, 'thumbnail' ); ?>>
+
 											<div class="acadp-listings-title-block">
 
-												<?php /* show category icon */
 
-												$cat_glyph = '<span class="glyphicon glyphicon-briefcase"></span>';
-												$cat_glyph = rmm_get_category_icon( $post->ID);
-												?>
 													<h4 class="acadp-no-margin"><?php/* echo '<small>'.$cat_glyph.'</small>';*/?><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
 													<?php
@@ -102,18 +99,19 @@
 													?>
 													<?php the_acadp_listing_labels( $post_meta ); ?>
 											</div><!-- title block -->
-											<div class="acadp-listing-image">
-												<?php
-													$hasthumb = "";
-													if ( $can_show_images  &&  (isset( $post_meta['images'])) ) {
-														$hasthumb = "hasthumb"; ?>
-														<a href="<?php the_permalink(); ?>" class="acadp-responsive-container"><?php the_acadp_listing_thumbnail( $post_meta ); ?></a>
-
-												<?php }  else {
-													//echo '<div class="acadp-responsive-container"></div>';
-												}?>
-											</div>
 											<div class="acadp-listing-desc-wrap">
+												<div class="acadp-listing-image">
+													<?php
+														$hasthumb = "";
+														if ( $can_show_images  &&  (isset( $post_meta['images'])) ) {
+															$hasthumb = "hasthumb"; ?>
+															<a href="<?php the_permalink(); ?>" class="acadp-responsive-containerX"><?php the_acadp_listing_thumbnail( $post_meta ); ?></a>
+
+													<?php }  else {
+														//echo '<div class="acadp-responsive-container"></div>';
+													}?>
+												</div>
+
 
 
 											<?php /* contact info - address, phone website */
@@ -154,53 +152,41 @@
 														$contact_info .= '</div>';
 													}
 												}
-												echo '<div class="acadp-listing-contactinfo small '.$hasthumb.'">';
+												echo '<div class="acadp-listing-contactinfo smallX '.$hasthumb.'">';
 												echo $contact_info;
+												$custom_field = "29";// custom field pet-friendly, id=29
+												if (array_key_exists($custom_field,$post_meta) ) {
+													if ($post_meta[$custom_field][0] == 'yes') {
+														echo '<div class="acadp-listing-pets small">' ;
+														echo '<i class="fa fa-paw"></i> Pet Friendly';
+														echo "</div>";
+													}
+												}
 												echo '</div>';
 											?>
-                        <div class=" acadp-listing-catline">
-                            <?php
-																/* bottom line with category & location */
-                                $info = array();
-
-                                if( $can_show_category && $category = wp_get_object_terms( $post->ID, 'acadp_categories' ) ) {
-                                    $info[] = $cat_glyph.'&nbsp;<a href="'.acadp_get_category_page_link( $category[0] ).'">'.$category[0]->name.'</a>';
-                                }
-
-                                if( $can_show_location && $location = wp_get_object_terms( $post->ID, 'acadp_locations' ) ) {
-                                    $info[] = '<span class="glyphicon glyphicon-map-marker"></span>&nbsp;<a href="'.acadp_get_location_page_link( $location[0] ).'">'.$location[0]->name.'</a>';
-                                }
-
-                                if( 'acadp_favourite_listings' == $shortcode ) {
-                                    $info[] = '<a href="'.acadp_get_remove_favourites_page_link( $post->ID ).'">'.__( 'Remove from favourites', 'advanced-classifieds-and-directory-pro' ).'</a>';
-                                }
-
-                                if( $can_show_views && ! empty( $post_meta['views'][0] ) ) {
-                                    $info[] = sprintf( __( "%d views", 'advanced-classifieds-and-directory-pro' ), $post_meta['views'][0] );
-                                }
-
-                                echo '<p class="acadp-no-margin"><small>'.implode( ' / ', $info ).'</small></p>';
-
-                                if( $can_show_price && isset( $post_meta['price'] ) && $post_meta['price'][0] > 0 ) {
-                                    $price = acadp_format_amount( $post_meta['price'][0] );
-                                    echo '<p class="lead acadp-listings-price">'.acadp_currency_filter( $price ).'</p>';
-                                }
-                            ?>
-
-                            <?php do_action( 'acadp_after_listing_content', $post->ID, 'grid' ); ?>
-                        </div> <!-- catline -->
-												<?php /* show if pet-friendly */
-													//echo "<pre>"; var_dump($post_meta); echo "</pre>";
-													$custom_field = "29";// custom field pet-friendly, id=29
-													if (array_key_exists($custom_field,$post_meta) ) {
-														if ($post_meta[$custom_field][0] == 'yes') {
-															echo '<div class="acadp-listing-pets small">' ;
-															echo '<p><i class="fa fa-paw"></i> Pet Friendly</p>';
-															echo "</div>";
-														}
-													}
-												?>
+										
 											</div> <!-- desc-wrap -->
+
+											<div class=" acadp-listing-catline">
+													<?php
+														$cat_glyph = '<span class="glyphicon glyphicon-briefcase"></span>';
+														$cat_glyph = rmm_get_category_icon( $post->ID);
+
+															/*  line with category & location */
+															$info = array();
+															if( $can_show_category && $category = wp_get_object_terms( $post->ID, 'acadp_categories' ) ) {
+																	//$info[] = $cat_glyph.'&nbsp;<a href="'.acadp_get_category_page_link( $category[0] ).'">'.$category[0]->name.'</a>';
+																	$info[] = $cat_glyph.'&nbsp;'.$category[0]->name;
+															}
+															if( $can_show_location && $location = wp_get_object_terms( $post->ID, 'acadp_locations' ) ) {
+																	//$info[] = '<span class="glyphicon glyphicon-map-marker"></span>&nbsp;<a href="'.acadp_get_location_page_link( $location[0] ).'">'.$location[0]->name.'</a>';
+																	//$info[] = '<a href="'.acadp_get_location_page_link( $location[0] ).'">'.$location[0]->name.'</a>';
+																	$info[] = $location[0]->name;
+															}
+															echo '<p class="acadp-no-margin"><small>'.implode( ' / ', $info ).'</small></p>';
+													?>
+											</div><!-- catline -->
+											<?php do_action( 'acadp_after_listing_content', $post->ID, 'grid' ); ?>
                     </div> <!-- thumbnail -->
                 </div>
 
