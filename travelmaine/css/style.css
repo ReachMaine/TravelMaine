@@ -219,6 +219,11 @@ ul.travelme-flex-list {
 .single.single-acadp_listings .acadp-desc {
   padding-top: 10px; }
 
+.acadp.acadp-search.acadp-search-inline .form-group .form-control {
+  background-color: white; }
+.acadp.acadp-search.acadp-search-inline .acadp-action-buttons {
+  text-align: right; }
+
 /* styling for tribe events & events calendar shortcode */
 ul.ecs-event-list li.ecs-event {
   list-style: none;

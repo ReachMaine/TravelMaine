@@ -22,6 +22,15 @@
 											 break;
 							 }
 						} // end ohin
+						case 'advanced-classifieds-and-directory-pro': {
+								switch ( $translated_text ) {
+										 case 'No Results Found.' : //
+												if ( ! isset( $_GET['q'] ) ) {
+													$translated_text =  'Make your selection to see results.';
+													}
+												break;
+								 }
+							} // listings
 					default:
 						/* switch ( $translated_text ) {
 				            case 'Category' :

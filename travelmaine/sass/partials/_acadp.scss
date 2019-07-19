@@ -133,3 +133,14 @@
     padding-top: 10px;
   }
 }
+
+.acadp.acadp-search.acadp-search-inline { // form
+  .form-group {
+    .form-control {
+      background-color: white;
+    }
+  }
+  .acadp-action-buttons {
+    text-align: right;
+  }
+}
