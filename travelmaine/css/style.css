@@ -241,7 +241,7 @@ ul.ecs-event-list li.ecs-event {
     display: inline-block;
     min-height: 60px;
     width: 78%;
-    background-color: black;
+    background-color: #4e4e50;
     color: white;
     vertical-align: top;
     line-height: 1.4em; }
