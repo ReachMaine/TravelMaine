@@ -308,27 +308,64 @@ ul.ecs-event-list li.ecs-event:not(:last-child) {
 
 /*** REMOVE LABEL ON FIELDS USING PLACEHOLDER ***/
 .gform_wrapper .gform_body .ginput_complex.ginput_container .name_first label,
-.gform_wrapper .gform_body .ginput_complex.ginput_container .name_last label {
+.gform_wrapper .gform_body .ginput_complex.ginput_container .name_last label,
+.gform_wrapper .gform_body .ginput_complex.ginput_container .address_line_1 label,
+.gform_wrapper .gform_body .ginput_complex.ginput_container .address_city label,
+.gform_wrapper .gform_body .ginput_complex.ginput_container .address_state label,
+.gform_wrapper .gform_body .ginput_complex.ginput_container .address_zip label,
+.gform_wrapper .gform_body .ginput_complex.ginput_container .address_country label {
+  display: none; }
+.gform_wrapper .gform_body .gfield.hide-label label {
   display: none; }
 
-.gform_wrapper .gform_body ul.gfield_checkbox li input[type=checkbox] {
-  height: 20px;
-  width: 20px !important; }
-
-.gform_wrapper .gform_footer {
-  text-align: right; }
-  .gform_wrapper .gform_footer input.button {
-    background: white;
-    border: 2px solid #9e9e9e;
-    font-size: 22px;
-    padding: 12px 23px;
-    border-radius: 5px;
-    letter-spacing: 2px;
-    cursor: pointer; }
-
-/*** BUTTON HOVER STYLING ***/
-.gform_wrapper .gform_footer input.button:hover {
-  border: 2px solid transparent; }
+.gform_wrapper form {
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 15px; }
+  .gform_wrapper form .gform_heading {
+    margin-bottom: 0px; }
+    .gform_wrapper form .gform_heading h3.gform_title {
+      font-weight: normal;
+      padding-bottom: 0px;
+      font-size: 26px; }
+    .gform_wrapper form .gform_heading .gform_description {
+      margin-bottom: 0px; }
+  .gform_wrapper form .gform_body ul.gform_fields li.gfield {
+    margin-bottom: 16px;
+    margin-top: 0px; }
+  .gform_wrapper form .gform_body ul.gform_fields input[type=text],
+  .gform_wrapper form .gform_body ul.gform_fields select,
+  .gform_wrapper form .gform_body ul.gform_fields textarea {
+    background: #eee;
+    padding: 15px !important;
+    border-radius: 3px 3px 3px 3px;
+    border-width: 1px;
+    border-color: #e1e2e3; }
+  .gform_wrapper form .gform_body ul.gform_fields input[type=text]:focus,
+  .gform_wrapper form .gform_body ul.gform_fields textarea:focus {
+    border-color: #e1e2e3; }
+  .gform_wrapper form .gform_body ul.gform_fields .ginput_container_address input {
+    margin-bottom: 10px; }
+  .gform_wrapper form .gform_body ul.gfield_checkbox li input[type=checkbox] {
+    height: 20px;
+    width: 20px !important;
+    background-color: #eee; }
+  .gform_wrapper form .gform_footer {
+    text-align: right;
+    margin-top: 0px;
+    padding-bottom: 30px; }
+    .gform_wrapper form .gform_footer input.button {
+      background: #13ca91;
+      border: 0px;
+      font-size: 20px !important;
+      color: white;
+      padding: 12px 23px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      border-radius: 0px; }
+    .gform_wrapper form .gform_footer input.button:hover {
+      border: 2px solid transparent; }
 
 /* styling for divi overlays */
 .overlay-container p {
