@@ -169,7 +169,7 @@ ul.travelme-flex-list {
       font-weight: bold;
       padding-bottom: 0px; }
       .acadp .thumbnail.acadp-entry .acadp-listings-title-block h4 a {
-        color: #4e4e50; }
+        color: #333; }
     .acadp .thumbnail.acadp-entry .acadp-listings-title-block .acadp-listing-subtitle {
       clear: both;
       font-style: italic;
@@ -208,15 +208,24 @@ ul.travelme-flex-list {
 
 .single.single-acadp_listings .acadp.acadp-listing a {
   color: #13ca91; }
-.single.single-acadp_listings .acadp-logo-image img {
+.single.single-acadp_listings .acadp.acadp-listing .acadp-post-title {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #13ca91;
+  margin-bottom: 15px; }
+  .single.single-acadp_listings .acadp.acadp-listing .acadp-post-title h1 {
+    font-size: 2.5em;
+    color: #333; }
+.single.single-acadp_listings .acadp.acadp-listing .acadp-logo-image img {
   max-height: 300px;
   padding-bottom: 10px; }
-.single.single-acadp_listings .acadp-mapdir {
-  text-align: right; }
-  .single.single-acadp_listings .acadp-mapdir a img {
-    background-color: #13ca91;
-    padding: 1px; }
-.single.single-acadp_listings .acadp-desc {
+.single.single-acadp_listings .acadp.acadp-listing .acadp-cat {
+  text-align: center; }
+.single.single-acadp_listings .acadp.acadp-listing .acadp-website a {
+  color: #666; }
+.single.single-acadp_listings .acadp.acadp-listing .acadp-mapdir a img {
+  background-color: #13ca91;
+  padding: 1px; }
+.single.single-acadp_listings .acadp.acadp-listing .acadp-desc {
   padding-top: 10px; }
 
 .acadp.acadp-search.acadp-search-inline .form-group .form-control {
@@ -224,6 +233,19 @@ ul.travelme-flex-list {
 .acadp.acadp-search.acadp-search-inline .acadp-action-buttons {
   text-align: right; }
 
+.acadp-show-phone-number {
+  display: none; }
+
+.acadp-phone-number {
+  display: inline !important; }
+
+@media all and (max-width: 479px) {
+  .acadp.acadp-listings .thumbnail.acadp-entry .acadp-listing-desc-wrap .acadp-listing-image {
+    width: 100%;
+    float: none; }
+  .acadp.acadp-listings .thumbnail.acadp-entry .acadp-listing-desc-wrap .acadp-listing-contactinfo.hasthumb {
+    width: 100%;
+    text-align: center; } }
 /* styling for tribe events & events calendar shortcode */
 ul.ecs-event-list li.ecs-event {
   list-style: none;
@@ -368,6 +390,12 @@ body.home #top-menu li.current-menu-item > a {
       line-height: 1.3em;
       text-align: center;
       font-weight: bold; }
+
+#footer-widgets .footer-widget {
+  display: flex;
+  justify-content: center;
+  width: 100% !important;
+  margin-right: 0px !important; }
 
 /* **** media **** */
 @media all and (min-width: 981px) {

@@ -12,7 +12,7 @@
 				<!-- Title & subtitle -->
 				<div class="col-md-12">
 					<div class="acadp-post-title">
-							<h1 class="acadp-no-margin"><?php echo $post->post_title; ?></h1>
+							<h1 class="acadp-no-marginX"><?php echo $post->post_title; ?></h1>
 							<?php
 								//echo "<pre>"; var_dump($post_meta); echo "</pre>";
 								 $custom_field = "216";// custom field subtitle, id=216
@@ -34,88 +34,59 @@
 									}
 						?>
 						<?php if( $can_show_category ) {
-								echo sprintf( rmm_get_category_icon( $post->ID).'&nbsp;<a href="%s">%s</a>', acadp_get_category_page_link( $category ), $category->name );
+								//echo sprintf( rmm_get_category_icon( $post->ID).'&nbsp;<a href="%s">%s</a>', acadp_get_category_page_link( $category ), $category->name );
 						} ?>
 					</div> <!-- end post title -->
-				</div>
-
-        <div class="<?php echo $can_show_images ? 'col-md-4' : 'col-md-8'; ?>">
-
-
-							<!-- post-meta -->
-							<div class="acadp-post-meta"> <?php
-                    $meta = array();
-
-                    /* if( $can_show_category ) {
-												$meta[] = sprintf( rmm_get_category_icon( $post->ID).'&nbsp;<a href="%s">%s</a>', acadp_get_category_page_link( $category ), $category->name );
-                    } */
-
-                    if( count( $usermeta ) ) {
-                        $meta[] = implode( ' '.__( 'by', 'advanced-classifieds-and-directory-pro' ).' ', $usermeta );
-                    }
-
-                    if( $can_show_views ) {
-                        $meta[] = sprintf( __( "%d views", 'advanced-classifieds-and-directory-pro' ), $post_meta['views'][0] );
-                    }
-
-                    if( count( $meta ) ) {
-                        echo '<p><small class="text-muted">'.implode( ' / ', $meta ).'</small></p>';
-                    }
-
-										if( $can_show_category_desc ) {
-											echo '<p><small class="text-muted">'.$category->description.'</small></p>';
-										}
-
-                ?>
-            </div> <!-- post meta -->
-
-						<?php /* <!-- Address --> */
-						 if( $has_location ) {
-							 echo '<div class="acadp-post-location">';
-								the_acadp_address( $post_meta, $location->term_id );
-								echo '</div>';
-						 } ?>
-
-            <!-- Price -->
-            <?php if( $can_show_price ) : ?>
-                <div class="pull-right text-right acadp-price-block">
-                    <?php
-                        $price = acadp_format_amount( $post_meta['price'][0] );
-                        echo '<p class="lead acadp-no-margin">'.acadp_currency_filter( $price ).'</p>';
-                    ?>
-                </div>
-            <?php endif; ?>
-						<?php /* show if pet-friendly */
-							//echo "<pre>"; var_dump($post_meta); echo "</pre>";
-							$custom_field = "29";// custom field subtitle, id=216
-							if (array_key_exists($custom_field,$post_meta) ) {
-								if ($post_meta[$custom_field][0] == 'yes') {
-									echo '<div class="acadp-listing-pets">' ;
-									echo '<i class="fa fa-paw"></i> Pet Friendly';
-									echo "</div>";
-								}
-							}
-						?>
-					</div> <!-- end col 9/12 -->
+				</div> <!-- end col 12 -->
+	</div> <!-- row with title -->
+	<div class="row">		<!-- row with info -->
+				<div class="acadp-listing-info"> <!-- begin info -->
 					<?php if( $can_show_images ) { ?>
-						<div class="col-md-4"> <?php
+						<div class="col-md-2"> <?php
 								$images = unserialize( $post_meta['images'][0] );
 								$image_attributes = wp_get_attachment_image_src( $images[0], 'large' ); ?>
 								<div class="acadp-logo-image"><img src="<?php echo $image_attributes[0]; ?>" /></div>
+								<?php if( $can_show_category ) {
+										echo '<div class="acadp-cat">' ;
+										echo sprintf( rmm_get_category_icon( $post->ID).'&nbsp;<a href="%s">%s</a>', acadp_get_category_page_link( $category ), $category->name );
+										echo '</div>';
+								} ?>
 						</div>
 					<?php } /* end images */ ?>
-					<!-- map -->
-					<div class="col-md-4">
-						<?php if( $can_show_map && ($post_meta['address'][0] != "") ) :
-									 //echo '<p> lat is:{'.$post_meta['latitude'][0].'} and lon is: {'.$post_meta['longitude'][0].'}</p>';
-									 //echo '<p>address is:{'.$post_meta['address'][0].'}</p>';
-									 //echo '<pre>';var_dump($post_meta['address'][0]); echo '</pre>';
+
+	        <div class="<?php echo $can_show_images ? 'col-md-4' : 'col-md-6'; ?>"><!-- contact  -->
+								<!-- post-meta -->
+								<div class="acadp-post-meta"> <?php
+	                    $meta = array();
+
+	                    /* if( $can_show_category ) {
+													$meta[] = sprintf( rmm_get_category_icon( $post->ID).'&nbsp;<a href="%s">%s</a>', acadp_get_category_page_link( $category ), $category->name );
+	                    } */
+
+	                    if( count( $usermeta ) ) {
+	                        $meta[] = implode( ' '.__( 'by', 'advanced-classifieds-and-directory-pro' ).' ', $usermeta );
+	                    }
+
+	                    if( $can_show_views ) {
+	                        $meta[] = sprintf( __( "%d views", 'advanced-classifieds-and-directory-pro' ), $post_meta['views'][0] );
+	                    }
+
+	                    if( count( $meta ) ) {
+	                        echo '<p><small class="text-muted">'.implode( ' / ', $meta ).'</small></p>';
+	                    }
+
+											if( $can_show_category_desc ) {
+												echo '<p><small class="text-muted">'.$category->description.'</small></p>';
+											}
+
+	                ?>
+	            </div> <!-- post meta -->
+
+							<?php /* <!-- Address --> */
+							 if( $has_location ) {
+								 echo '<div class="acadp-post-location">';
+									the_acadp_address( $post_meta, $location->term_id );
 									 ?>
-									<div class="embed-responsive embed-responsive-16by9 acadp-margin-bottom">
-											<div class="acadp-map embed-responsive-item">
-													<div class="marker" data-latitude="<?php echo $post_meta['latitude'][0]; ?>" data-longitude="<?php echo $post_meta['longitude'][0]; ?>"></div>
-											</div>
-									</div>
 									<div class="acadp-mapdir">
 											<?php
 											$gmap_addstr  = preg_replace('/\s/', '+', $post_meta["address"][0]);
@@ -126,8 +97,37 @@
 												<img src="<?php echo get_stylesheet_directory_uri();?>/images/directions.png">
 											</a>
 									</div>
+							 <?php echo '</div>';
+						 } ?>
+
+	            						<?php /* show if pet-friendly */
+								//echo "<pre>"; var_dump($post_meta); echo "</pre>";
+								$custom_field = "29";// custom field subtitle, id=216
+								if (array_key_exists($custom_field,$post_meta) ) {
+									if ($post_meta[$custom_field][0] == 'yes') {
+										echo '<div class="acadp-listing-pets">' ;
+										echo '<i class="fa fa-paw"></i> Pet Friendly';
+										echo "</div>";
+									}
+								}
+							?>
+						</div> <!-- end contact  -->
+
+						<!-- map -->
+						<div class="col-md-6">
+							<?php if( $can_show_map && ($post_meta['address'][0] != "") ) :
+										 //echo '<p> lat is:{'.$post_meta['latitude'][0].'} and lon is: {'.$post_meta['longitude'][0].'}</p>';
+										 //echo '<p>address is:{'.$post_meta['address'][0].'}</p>';
+										 //echo '<pre>';var_dump($post_meta['address'][0]); echo '</pre>';
+										 ?>
+										<div class="embed-responsive embed-responsive-16by9 acadp-margin-bottom">
+												<div class="acadp-map embed-responsive-item">
+														<div class="marker" data-latitude="<?php echo $post_meta['latitude'][0]; ?>" data-longitude="<?php echo $post_meta['longitude'][0]; ?>"></div>
+												</div>
+										</div>
 							<?php endif; ?>
-					</div>
+						</div> <!-- end map -->
+					</div><!-- end info -->
           <div class="clearfix"></div>
 
 

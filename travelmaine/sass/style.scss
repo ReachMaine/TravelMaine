@@ -63,5 +63,14 @@ body.home #top-menu li.current-menu-item>a {  // active link on home page
     }
   }
 }
+// Footer
+#footer-widgets {
+  .footer-widget {
+      display: flex;
+      justify-content: center;
+      width: 100%!important;
+      margin-right: 0px!important;
+  }
+}
 
 @import "partials/media"; // keep at bottom;
