@@ -50,9 +50,9 @@ body.home #top-menu li.current-menu-item>a {  // active link on home page
       border-width: 5px;
       border-color: rgba(0,0,0,0);
       padding-top: 30px!important;
-      padding-right: 15px!important;
+      padding-right: 10px!important;
       padding-bottom: 18px!important;
-      padding-left: 15px!important;
+      padding-left: 10px!important;
       h4 {
         color: $travelme-green;
         font-size: 1.3em;
@@ -60,13 +60,26 @@ body.home #top-menu li.current-menu-item>a {  // active link on home page
         text-align: center;
         font-weight: bold;
       }
+      .request_guide_btn {
+        background-color: $travelme-green;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        a {
+          color: white;
+          font-size: 20px;
+        }
+      }
     }
   }
 }
 // Footer
 #footer-widgets {
   .footer-widget {
+      display: -webkit-flex;
       display: flex;
+
       justify-content: center;
       width: 100%!important;
       margin-right: 0px!important;

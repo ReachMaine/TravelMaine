@@ -36,7 +36,7 @@ function travelmaine_esc_title_start ($in_title_string) {
 // wrap venue in div s.t. we can style it.
 add_filter ('ecs_event_venue_tag_start','travelmaine_esc_venue_start');
 function travelmaine_esc_venue_start ($in_string) {
-  return '<div class="travelme-esc-venue"'.$in_string;
+  return '<div class="travelme-esc-venue">'.$in_string;
 }
 add_filter ('ecs_event_venue_tag_end','travelmaine_esc_enddiv');
 function travelmaine_esc_enddiv ($in_string) {
@@ -46,3 +46,16 @@ add_filter ('ecs_event_venue_at_text','travelmaine_esc_nope');
 function travelmaine_esc_nope($in_string) {
   return "";
 }
+
+add_filter ('ecs_event_date_tag_start','travelmaine_esc_date_start');
+function travelmaine_esc_date_start ($in_string) {
+  return '<div class="travelme-esc-date">'.$in_string;
+}
+add_filter ('ecs_event_date_tag_end','travelmaine_esc_enddiv');
+
+
+add_filter ('ecs_view_all_events_tag_start','travelmaine_esc_all_events_start');
+function travelmaine_esc_all_events_start ($in_string) {
+  return '<div class="travelme-esc-all">'.$in_string;
+}
+add_filter ('ecs_view_all_events_tag_end','travelmaine_esc_enddiv');

@@ -215,6 +215,8 @@ ul.travelme-flex-list {
   .single.single-acadp_listings .acadp.acadp-listing .acadp-post-title h1 {
     font-size: 2.5em;
     color: #333; }
+.single.single-acadp_listings .acadp.acadp-listing .acadp-listing-info {
+  padding-top: 30px; }
 .single.single-acadp_listings .acadp.acadp-listing .acadp-logo-image img {
   max-height: 300px;
   padding-bottom: 10px; }
@@ -247,62 +249,31 @@ ul.travelme-flex-list {
     width: 100%;
     text-align: center; } }
 /* styling for tribe events & events calendar shortcode */
-ul.ecs-event-list li.ecs-event {
-  list-style: none;
-  padding-bottom: 10px; }
-  ul.ecs-event-list li.ecs-event .date_thumb {
-    height: 60px;
-    width: 60px;
-    display: inline-block;
-    border-color: #e8fbf9;
-    border-left: 3px solid #FF9800;
-    border-right: 1px solid #FF9800;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
-    text-align: center; }
-  ul.ecs-event-list li.ecs-event h4.entry-title {
-    padding-top: 8px;
-    padding-left: 6px;
-    padding-bottom: 0px;
-    font-weight: bold;
-    display: inline-block;
-    min-height: 60px;
-    width: 78%;
-    background-color: #4e4e50;
-    color: white;
-    vertical-align: top;
-    line-height: 1.4em; }
-  ul.ecs-event-list li.ecs-event .ecs-excerpt {
-    clear: both;
-    padding-top: 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid lightgrey; }
-  ul.ecs-event-list li.ecs-event .travelme-esc-venue {
-    padding-left: 20px; }
-  ul.ecs-event-list li.ecs-event .duration.time {
-    padding-left: 20px; }
-ul.ecs-event-list li.ecs-event:not(:last-child) {
-  padding-right: 1%; }
+ul.ecs-event-list {
+  padding: 0px 0px 20px 0px; }
+  ul.ecs-event-list li.ecs-event {
+    list-style: none; }
+    ul.ecs-event-list li.ecs-event h4.entry-title {
+      padding-bottom: 0px;
+      text-align: center; }
+      ul.ecs-event-list li.ecs-event h4.entry-title a {
+        color: #333;
+        font-size: 1.1em; }
+    ul.ecs-event-list li.ecs-event .travelme-esc-date {
+      text-align: center; }
+  ul.ecs-event-list li.ecs-event:not(:last-child) {
+    border-bottom: 2px solid #FF9800;
+    padding-bottom: 20px;
+    margin-bottom: 25px; }
 
-.ecs-all-events {
-  padding: 20px;
-  border: 2px solid #13ca91; }
-  .ecs-all-events a {
-    color: #13ca91; }
+.travelme-esc-all {
+  text-align: center; }
+  .travelme-esc-all .ecs-all-events {
+    padding: 6px 14px;
+    border: 2px solid #13ca91; }
+    .travelme-esc-all .ecs-all-events a {
+      color: #13ca91; }
 
-@media only all and (min-width: 768px) {
-  ul.ecs-event-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap; }
-    ul.ecs-event-list li.ecs-event {
-      width: 50%; } }
-@media only all and (min-width: 992px) {
-  ul.ecs-event-list {
-    flex-wrap: nowrap; }
-    ul.ecs-event-list li.ecs-event {
-      list-style: none; } }
 .gform_wrapper form {
   padding-left: 15px; }
 
@@ -418,17 +389,27 @@ body.home #top-menu li.current-menu-item > a {
     border-width: 5px;
     border-color: transparent;
     padding-top: 30px !important;
-    padding-right: 15px !important;
+    padding-right: 10px !important;
     padding-bottom: 18px !important;
-    padding-left: 15px !important; }
+    padding-left: 10px !important; }
     .textwidget .request_guide_wrap .request_guide_inner h4 {
       color: #13ca91;
       font-size: 1.3em;
       line-height: 1.3em;
       text-align: center;
       font-weight: bold; }
+    .textwidget .request_guide_wrap .request_guide_inner .request_guide_btn {
+      background-color: #13ca91;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center; }
+      .textwidget .request_guide_wrap .request_guide_inner .request_guide_btn a {
+        color: white;
+        font-size: 20px; }
 
 #footer-widgets .footer-widget {
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   width: 100% !important;
