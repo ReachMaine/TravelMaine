@@ -36,3 +36,21 @@ ul.ecs-event-list {
 }
 @media only all  and (min-width: 992px) {
 }
+
+// events page...
+h1.tribe-events-page-title {
+  font-family: 'Caveat',handwriting;
+  font-size: 45px;
+  color: $travelme-green;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+#tribe-events-content {
+    .tribe-events-list-separator-month {
+      color: $travelme-green;
+    }
+}
+
+.datepicker.dropdown-menu {
+  z-index: 100000!important;
+}

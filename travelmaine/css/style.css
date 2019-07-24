@@ -274,6 +274,19 @@ ul.ecs-event-list {
     .travelme-esc-all .ecs-all-events a {
       color: #13ca91; }
 
+h1.tribe-events-page-title {
+  font-family: 'Caveat',handwriting;
+  font-size: 45px;
+  color: #13ca91;
+  letter-spacing: 1px;
+  font-style: italic; }
+
+#tribe-events-content .tribe-events-list-separator-month {
+  color: #13ca91; }
+
+.datepicker.dropdown-menu {
+  z-index: 100000 !important; }
+
 .gform_wrapper form {
   padding-left: 15px; }
 
@@ -375,10 +388,12 @@ body.home #top-menu li.current-menu-item > a {
 
 #top-menu-nav ul#top-menu ul.sub-menu li {
   padding: 8px 0px;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  width: 100%; }
   #top-menu-nav ul#top-menu ul.sub-menu li a {
     font-size: 14px;
-    letter-spacing: normal; }
+    letter-spacing: normal;
+    width: 100%; }
 
 .textwidget .request_guide_wrap {
   border-radius: 6px 6px 6px 6px;

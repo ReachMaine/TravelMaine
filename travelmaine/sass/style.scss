@@ -28,9 +28,11 @@ body.home #top-menu li.current-menu-item>a {  // active link on home page
       li {
         padding: 8px 0px;
         line-height: 1.5em;
+        width: 100%;
         a {
           font-size: 14px;
           letter-spacing: normal;
+          width: 100%;
         }
       }
     }
