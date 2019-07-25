@@ -84,7 +84,7 @@
 											<div class="acadp-listings-title-block">
 
 
-													<h4 class="acadp-no-margin"><?php/* echo '<small>'.$cat_glyph.'</small>';*/?><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+													<h4 class="acadp-no-margin"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
 													<?php
 														//echo "<pre>"; var_dump($post_meta); echo "</pre>";
@@ -164,7 +164,7 @@
 												}
 												echo '</div>';
 											?>
-										
+
 											</div> <!-- desc-wrap -->
 
 											<div class=" acadp-listing-catline">

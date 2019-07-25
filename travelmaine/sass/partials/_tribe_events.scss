@@ -34,8 +34,51 @@ ul.ecs-event-list {
     }
   }
 }
-@media only all  and (min-width: 992px) {
+.travelme-horizontal-esc { // display the list horizontally (home page layout)
+  ul.ecs-event-list {
+      display: -webkit-flex;
+    display: flex;
+      -webkit-flex-direction: row;
+    flex-direction: row;
+      -webkit-justify-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    li.ecs-event {
+      -webkit-flex: 1 0 0;
+      flex: 1 0 0;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-bottom: 0px;
+      margin-bottom: 0px;
+      h4.entry-title {
+        padding-bottom: 10px;
+        border-bottom: 2px solid $travelme-orange-hilite;
+      }
+      .ecs-excerpt {
+        padding-top: 10px;
+      }
+    }
+    li.ecs-event:not(:last-child), {
+      border-right: 1px solid $travelme-divider;
+    }
+  }
 }
+@media all and (max-width: 980px) { // mobile menu 767 ,  980 = hamberger menu
+   .travelme-horizontal-esc { // display the list horizontally (home page layout)
+     ul.ecs-event-list {
+       display: block;
+       li.ecs-event:not(:last-child), {
+         border-right: 0px; // reset borders
+         padding-bottom: 30px;
+       }
+       li.esc-event {
+         width: 100%;
+         padding-bottom: 30px;
+       }
+     }
+   }
+ }
+
 
 // events page...
 h1.tribe-events-page-title {

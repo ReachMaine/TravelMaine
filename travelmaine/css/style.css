@@ -274,6 +274,38 @@ ul.ecs-event-list {
     .travelme-esc-all .ecs-all-events a {
       color: #13ca91; }
 
+.travelme-horizontal-esc ul.ecs-event-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .travelme-horizontal-esc ul.ecs-event-list li.ecs-event {
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 0px;
+    margin-bottom: 0px; }
+    .travelme-horizontal-esc ul.ecs-event-list li.ecs-event h4.entry-title {
+      padding-bottom: 10px;
+      border-bottom: 2px solid #FF9800; }
+    .travelme-horizontal-esc ul.ecs-event-list li.ecs-event .ecs-excerpt {
+      padding-top: 10px; }
+  .travelme-horizontal-esc ul.ecs-event-list li.ecs-event:not(:last-child) {
+    border-right: 1px solid #ddd; }
+
+@media all and (max-width: 980px) {
+  .travelme-horizontal-esc ul.ecs-event-list {
+    display: block; }
+    .travelme-horizontal-esc ul.ecs-event-list li.ecs-event:not(:last-child) {
+      border-right: 0px;
+      padding-bottom: 30px; }
+    .travelme-horizontal-esc ul.ecs-event-list li.esc-event {
+      width: 100%;
+      padding-bottom: 30px; } }
 h1.tribe-events-page-title {
   font-family: 'Caveat',handwriting;
   font-size: 45px;
@@ -443,4 +475,12 @@ body.home #top-menu li.current-menu-item > a {
     margin-top: -124.5px; } }
 @media all and (max-width: 980px) {
   .et_mobile_nav_menu {
-    margin: 20px 20px 20px 0; } }
+    margin: 20px 20px 20px 0; }
+
+  .travelme-adgroup-3x6 {
+    max-width: 300px;
+    margin: auto; }
+
+  .travelme-guide-promo {
+    clear: both;
+    margin: auto; } }
