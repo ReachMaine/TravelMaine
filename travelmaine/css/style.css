@@ -462,6 +462,12 @@ body.home #top-menu li.current-menu-item > a {
   width: 100% !important;
   margin-right: 0px !important; }
 
+#footer-bottom .et-social-icons li.reach-logo a {
+  font-size: 1em; }
+#footer-bottom .et-social-icons li.reach-logo a:before {
+  content: url("images/reach-favicon.png");
+  padding-right: 4px; }
+
 /* **** media **** */
 @media all and (min-width: 981px) {
   .travelme-header-nav {

@@ -86,6 +86,19 @@ body.home #top-menu li.current-menu-item>a {  // active link on home page
       width: 100%!important;
       margin-right: 0px!important;
   }
+
+}
+#footer-bottom {
+  .et-social-icons {
+    li.reach-logo a {
+      //  color: white;
+      font-size: 1em;
+      }
+    li.reach-logo a:before {
+        content: url('images/reach-favicon.png');
+        padding-right: 4px;
+    }
+  }
 }
 
 @import "partials/media"; // keep at bottom;
