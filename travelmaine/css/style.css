@@ -146,6 +146,10 @@ ul.travelme-flex-list {
   text-transform: uppercase;
   color: white; }
 
+.travelme-header-fw.travelme-header-fw .et_pb_fullwidth_header_container.center .header-content {
+  width: 100%;
+  max-width: 100%; }
+
 /* custom styling for acadp */
 @media all and (min-width: 992px) {
   .acadp .row.row-eq-height {
@@ -462,9 +466,12 @@ body.home #top-menu li.current-menu-item > a {
   width: 100% !important;
   margin-right: 0px !important; }
 
-#footer-bottom .et-social-icons li.reach-logo a {
-  font-size: 1em; }
-#footer-bottom .et-social-icons li.reach-logo a:before {
+#footer-bottom a.et-social-icons.reach-logo {
+  font-size: 1em;
+  color: #9c9c9c; }
+#footer-bottom a.et-social-icons.reach-logo:hover {
+  color: #13ca91; }
+#footer-bottom a.et-social-icons.reach-logo:before {
   content: url("images/reach-favicon.png");
   padding-right: 4px; }
 

@@ -89,16 +89,17 @@ body.home #top-menu li.current-menu-item>a {  // active link on home page
 
 }
 #footer-bottom {
-  .et-social-icons {
-    li.reach-logo a {
-      //  color: white;
+    a.et-social-icons.reach-logo {
       font-size: 1em;
-      }
-    li.reach-logo a:before {
+      color: #9c9c9c;
+    }
+    a.et-social-icons.reach-logo:hover {
+      color: $travelme-green;
+    }
+    a.et-social-icons.reach-logo:before {
         content: url('images/reach-favicon.png');
         padding-right: 4px;
     }
-  }
 }
 
 @import "partials/media"; // keep at bottom;

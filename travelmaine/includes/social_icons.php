@@ -41,7 +41,7 @@
 		</a>
 	</li>
 <?php endif; ?>
-<li class="et-social-icon reach-logo">
+<!-- <li class="et-social-icon reach-logo">
 		<a href="https://www.reachmaine.com/">REACH Maine</a>
-</li>
+</li> -->
 </ul>
