@@ -16,6 +16,23 @@
 @import "partials/divi-overlays";
 @import "partials/divi-blog";
 
+#top-header {
+  #et-secondary-menu {
+    form.search-form,
+    form#searchform {
+      float: right;
+      margin-left: 10px;
+      margin-top: -5px;
+      .search-submit {
+        background-color: transparent;
+        border: 0px;
+        i.fa-search {
+          color: white;
+        }
+      }
+    }
+  }
+}
   #main-header { // make header transparent s.t. home page can slide under
     background-color: rgba(255, 255, 255, 0.43137254901960786);
   }
@@ -76,6 +93,34 @@ body.home #top-menu li.current-menu-item>a {  // active link on home page
     }
   }
 }
+
+// search results
+.search-results { // body
+  .search-title {
+    //margin-bottom: 30px;
+    margin-top: 30px;
+    border-bottom: 1px solid $travelme-divider;
+  }
+  .et_pb_post { // article
+    margin-bottom: 0px;
+    padding-top: 40px;
+    clear: both;
+    .post-meta {
+      padding-bottom: 0px!important;
+    }
+    .entry-featured-image-url {
+      margin-bottom: 0px;
+      img {
+        float: left;
+        padding-right: 10px;
+      }
+    }
+    .more-link {
+      padding-left: 4px;
+    }
+  }
+} // end search-results
+
 // Footer
 #footer-widgets {
   .footer-widget {

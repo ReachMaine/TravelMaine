@@ -104,6 +104,7 @@
 
 					et_show_cart_total();
 				?>
+				<?php get_search_form(); /* zig */ ?>
 				</div> <!-- #et-secondary-menu -->
 
 			</div> <!-- .container -->

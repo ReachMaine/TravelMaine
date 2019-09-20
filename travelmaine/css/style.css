@@ -416,6 +416,19 @@ h1.tribe-events-page-title {
   margin-bottom: 25%; }
 
 /*This section sets the height of the images on different screen sizes to keep it relatively square. If you are not using object-fit because it isn't supported in IE and Edge then you should remove this entire section or the images will be distorted*/
+#top-header #et-secondary-menu form.search-form,
+#top-header #et-secondary-menu form#searchform {
+  float: right;
+  margin-left: 10px;
+  margin-top: -5px; }
+  #top-header #et-secondary-menu form.search-form .search-submit,
+  #top-header #et-secondary-menu form#searchform .search-submit {
+    background-color: transparent;
+    border: 0px; }
+    #top-header #et-secondary-menu form.search-form .search-submit i.fa-search,
+    #top-header #et-secondary-menu form#searchform .search-submit i.fa-search {
+      color: white; }
+
 #main-header {
   background-color: rgba(255, 255, 255, 0.431372549); }
 
@@ -458,6 +471,23 @@ body.home #top-menu li.current-menu-item > a {
       .textwidget .request_guide_wrap .request_guide_inner .request_guide_btn a {
         color: white;
         font-size: 20px; }
+
+.search-results .search-title {
+  margin-top: 30px;
+  border-bottom: 1px solid #ddd; }
+.search-results .et_pb_post {
+  margin-bottom: 0px;
+  padding-top: 40px;
+  clear: both; }
+  .search-results .et_pb_post .post-meta {
+    padding-bottom: 0px !important; }
+  .search-results .et_pb_post .entry-featured-image-url {
+    margin-bottom: 0px; }
+    .search-results .et_pb_post .entry-featured-image-url img {
+      float: left;
+      padding-right: 10px; }
+  .search-results .et_pb_post .more-link {
+    padding-left: 4px; }
 
 #footer-widgets .footer-widget {
   display: -webkit-flex;
