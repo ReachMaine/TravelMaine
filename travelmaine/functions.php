@@ -11,6 +11,8 @@ require_once(get_stylesheet_directory().'/custom/language.php');
 require_once(get_stylesheet_directory().'/custom/divi.php');
 require_once(get_stylesheet_directory().'/custom/acadp.php');
 require_once(get_stylesheet_directory().'/custom/tribe_events.php');
+require_once(get_stylesheet_directory().'/custom/acadp-pets-shortcode.php');
+
 function my_scripts_method() {
     wp_enqueue_script(
         'rmm_custom_js',
