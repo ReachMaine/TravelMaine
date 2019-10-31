@@ -46,6 +46,10 @@ function rmm_get_category_icon ($in_postid) {
           $out_str = '<span class="glyphicon glyphicon-check"></span>';
           $out_str = '<i class="fas fa-paw"></i>';
           break;
+        case 'living':
+          $out_str = '<span class="glyphicon glyphicon-home"></span>';
+          $out_str = '<i class="fas fa-home"></i>';
+          break;
       }
   }
   return $out_str;
