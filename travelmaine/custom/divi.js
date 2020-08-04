@@ -1,55 +1,55 @@
 // script for hiding & showing stuff on home page.
 jQuery(function ($) {
     $( document ).ready(function() {
-      	// tab0 = aroostook
-        $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_0").on("click", function(){
+      	// tab8 = aroostook
+        $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_8").on("click", function(){
           hide_maps_desc(); // hide everything
           document.getElementById('map-aroostook').style.display="block";
           document.getElementById('desc-aroostook').style.display="block";
 
         });
-      	// tab1 = highlands
-        $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_1").on("click", function(){
+      	// tab_9 = highlands
+        $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_9").on("click", function(){
           hide_maps_desc(); // hide everything
           document.getElementById('desc-highlands').style.display="block";
           document.getElementById('map-highlands').style.display="block";
         });
-       // tab2 = Kennebec Valley
-       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_2").on("click", function(){
+       // tab_10 = Kennebec Valley
+       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_10").on("click", function(){
           hide_maps_desc(); // hide everything
           document.getElementById('map-kennebec').style.display="block";
           document.getElementById('desc-kennebec').style.display="block";
         });
       // tab3 = lakes
-       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_3").on("click", function(){
+       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_11").on("click", function(){
          hide_maps_desc(); // hide everything
 
           document.getElementById('desc-lakes-mounts').style.display="block";
           document.getElementById('map-lakes-mounts').style.display="block";
 
         });
-       // tab4 = downeast
-       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_4").on("click", function(){
+       // tab_12 = downeast
+       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_12").on("click", function(){
         	hide_maps_desc(); // hide everything
 
          document.getElementById('map-downeast').style.display="block";
           document.getElementById('desc-downeast').style.display="block";
         });
         // tab5 = midcoast
-       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_5").on("click", function(){
+       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_13").on("click", function(){
         	hide_maps_desc();
           document.getElementById('map-midcoast').style.display="block";
           document.getElementById('desc-midcoast').style.display="block";
         });
          // tab6 = portland
-       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_6").on("click", function(){
+       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_14").on("click", function(){
         	hide_maps_desc();
           document.getElementById('map-portland').style.display="block";
           document.getElementById('desc-portland').style.display="block";
 
         });
                // tab7 = Beaches
-       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_7").on("click", function(){
+       $("#tabs-regions .et_pb_tabs_controls .et_pb_tab_15").on("click", function(){
         	hide_maps_desc();
           document.getElementById('map-beaches').style.display="block";
           document.getElementById('desc-beaches').style.display="block";
