@@ -323,6 +323,18 @@ h1.tribe-events-page-title {
 .datepicker.dropdown-menu {
   z-index: 100000 !important; }
 
+/*******  tribe events "V2" styling  (skeletal) */
+.single.single-tribe_events .tribe-events-single-section.tribe-events-event-meta .tribe-events-meta-group {
+  width: 30%; }
+  .single.single-tribe_events .tribe-events-single-section.tribe-events-event-meta .tribe-events-meta-group dt {
+    font-weight: bold; }
+
+#tribe-events-footer .tribe-events-nav-pagination .tribe-events-sub-nav {
+  list-style: none; }
+  #tribe-events-footer .tribe-events-nav-pagination .tribe-events-sub-nav li a span {
+    display: inline; }
+
+/*** end events calendar V2 ************/
 .gform_wrapper form {
   padding-left: 15px; }
 

@@ -97,3 +97,29 @@ h1.tribe-events-page-title {
 .datepicker.dropdown-menu {
   z-index: 100000!important;
 }
+/*******  tribe events "V2" styling  (skeletal) */
+// single event V2 styling
+.single.single-tribe_events {
+  .tribe-events-single-section.tribe-events-event-meta {
+    .tribe-events-meta-group {
+      width: 30%;
+				dt {
+					font-weight: bold;
+				}
+    }
+  }
+}
+//  footer
+#tribe-events-footer {
+	.tribe-events-nav-pagination { // nav
+		.tribe-events-sub-nav { //ul
+			list-style: none;
+			li {
+				a span {  // show
+					display: inline;
+				}
+			}
+		}
+	}
+}
+/*** end events calendar V2 ************/
