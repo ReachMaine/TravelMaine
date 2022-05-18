@@ -81,18 +81,27 @@ ul.ecs-event-list {
 
 
 // events page...
-h1.tribe-events-page-title {
-  font-family: 'Caveat',handwriting;
-  font-size: 45px;
-  color: $travelme-green;
-  letter-spacing: 1px;
-  font-style: italic;
-}
-#tribe-events-content {
-    .tribe-events-list-separator-month {
-      color: $travelme-green;
+
+  h1.tribe-events-page-title {
+    font-family: 'Caveat',handwriting;
+    font-size: 45px;
+    color: $travelme-green;
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+  #tribe-events-content {
+      .tribe-events-list-separator-month {
+        color: $travelme-green;
+      }
+  }
+    // v2 styling...
+  .tribe-events {
+    .tribe-events-l-container {
+      padding-top: 0px!important;
+      padding-bottom: 0px!important;
     }
-}
+
+  }
 
 .datepicker.dropdown-menu {
   z-index: 100000!important;

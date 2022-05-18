@@ -320,6 +320,10 @@ h1.tribe-events-page-title {
 #tribe-events-content .tribe-events-list-separator-month {
   color: #13ca91; }
 
+.tribe-events .tribe-events-l-container {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important; }
+
 .datepicker.dropdown-menu {
   z-index: 100000 !important; }
 
@@ -350,6 +354,8 @@ h1.tribe-events-page-title {
 .gform_wrapper .gform_body .gfield.hide-label label {
   display: none; }
 
+.gform_wrapper .gform_heading h3.gform_title {
+  padding-left: 30px; }
 .gform_wrapper form {
   padding-top: 15px;
   padding-left: 30px;
@@ -442,7 +448,7 @@ h1.tribe-events-page-title {
       color: white; }
 
 #main-header {
-  background-color: rgba(255, 255, 255, 0.431372549); }
+  background-color: rgba(255, 255, 255, 0.43137); }
 
 body.home #top-menu li.current-menu-item > a {
   color: white !important; }
@@ -539,3 +545,5 @@ body.home #top-menu li.current-menu-item > a {
   .travelme-guide-promo {
     clear: both;
     margin: auto; } }
+
+/*# sourceMappingURL=style.css.map */
