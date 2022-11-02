@@ -1,0 +1,16 @@
+.g.g-10 { // homepage ad block 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+
+}
+
+@media all and (min-width: 981px) { 
+
+    .g.g-10 { // homepage add block
+        //display: flex;
+        justify-content: space-between;
+
+    }
+}
