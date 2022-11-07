@@ -434,13 +434,19 @@ h1.tribe-events-page-title {
   margin-bottom: 25%; }
 
 /*This section sets the height of the images on different screen sizes to keep it relatively square. If you are not using object-fit because it isn't supported in IE and Edge then you should remove this entire section or the images will be distorted*/
+.g.g-12,
 .g.g-10 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 100%; }
 
-@media all and (min-width: 981px) {
+.g.g-10 img,
+.g.g-12 img {
+  margin: 10px; }
+
+@media all and (min-width: 1599px) {
+  .g.g-12,
   .g.g-10 {
     justify-content: space-between; } }
 #top-header #et-secondary-menu form.search-form,
